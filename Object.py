@@ -13,9 +13,15 @@ class Object:
         self.y = 0
         self.maxIndex =0
         self.horizental=True
+        self.moving= [0,0]
     def SetPosition(self,x,y):
         self.x = x
         self.y = y
+    def SetMoving(self, mouseInput):
+        deltaX = mouseInput[0] -  self.x
+        deltaY = mouseInput[1] - self.y
+        length =  math.sqrt(pow(deltaX,2) + pow(deltaY,2))
+        self.moving = (deltaX)/length, (deltaY)/length
     def SetMaxIndex(self, param,isHorizen=True):
         self.maxIndex = param
         self.horizental = isHorizen
@@ -25,7 +31,7 @@ class Object:
         self.left=left
         self.right = right
         self.increase = increase
-    def update(self, dir):
+    def update(self, dir, elapsedTime):
         if(self.horizental):
             if (dir == 0):
                 self.image.clip_draw(self.animationIndex*self.up[0],self.up[1],self.increase[0],self.increase[1],self.x,self.y)
@@ -48,3 +54,5 @@ class Object:
         #print(self.animationIndex)
         if(self.animationIndex > self.maxIndex):
             self.animationIndex = 0
+        self.x =self.x+ self.moving[0]*elapsedTime
+        self.y =self.y+ self.moving[1]*elapsedTime

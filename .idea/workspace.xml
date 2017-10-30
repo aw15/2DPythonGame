@@ -1,103 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/test.py" line="48" mnemonic="3" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="76271f8b-0219-40ed-b7dd-d981199eb585" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/MainGuy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/george.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/walkcyclevarious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Albert.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Captain.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/ChrisRock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Darryl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Doggy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Faelon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Farmer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Goblin.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Guard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Gunnar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Kamwerere.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/King.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Kitty.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Mate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Mel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Mom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Rios.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/SallyJones.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Seaside_informant.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Tiggy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Tipper.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/Trent.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/astronomer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/babies_mother.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/bartender.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/big_momma.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/chef.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/drunkard0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/drunkard1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/fat_old_guy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/geisha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/guy_world.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/lady.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/mokkan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/prisoner.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/ring_bearer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/sensei.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/shyzu_female.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/shyzu_male.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/soldier.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/toddler.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/villager1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/villager2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/villager3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/villager4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/villager5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/villager6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/charactor/새 폴더/villager7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/Scavengers_SpriteSheet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/Attack1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/Attack2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/Attack3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/Attack4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/Attack5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/archer/FantasyArcher_01_walk_0014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_attack_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_attack_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_attack_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_attack_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_attack_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_attack_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_die_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_die_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_die_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_die_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_die_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_die_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_walk_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_walk_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_walk_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_walk_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_walk_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/knight/Knight_walk_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/robot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/zombie_n_skeleton2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/enemy/마리오.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Object.py" afterPath="$PROJECT_DIR$/Object.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
@@ -114,8 +18,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="184">
+              <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -126,8 +30,8 @@
       <file leaf-file-name="Object.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="45" column="80" lean-forward="false" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="80" />
+            <state relative-caret-position="408">
+              <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -176,8 +80,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,6 +91,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,13 +153,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32798165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32798165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -276,6 +180,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="45" column="80" lean-forward="false" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -350,16 +272,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="45" column="80" lean-forward="false" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="80" />
+        <state relative-caret-position="408">
+          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="184">
+          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
