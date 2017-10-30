@@ -30,7 +30,7 @@ unitList = []
 for i in range(1,42):
     filename = '\c' + str(i)+'.png'
     newObject = Object.Object(r'resource\character\unit' + filename)
-    newObject.SetDirection([16,48],[16,16],[16,32],[16,0],[16,16])
+    newObject.SetDirection([32,96],[32,32],[32,64],[32,0],[32,32])
     newObject.SetPosition(100,100)
     newObject.SetMaxIndex(1)
     unitList.append(newObject)
@@ -45,10 +45,9 @@ while(True):
     for i in range(0,6):
         wall_image.draw(500,50+i*100)
     handle_events()
-    print(type(mouseInput))
     if(isClick):
-        unitList[35].SetMoving(mouseInput)
-    unitList[35].update(2,1)
+        unitList[0].SetMoving(mouseInput)
+    unitList[0].update(2,1)
     delay(0.08)
     update_canvas()
 close_canvas()

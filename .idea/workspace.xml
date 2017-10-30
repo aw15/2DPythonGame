@@ -2,8 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76271f8b-0219-40ed-b7dd-d981199eb585" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c1.png" afterPath="$PROJECT_DIR$/resource/character/unit/c1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c10.png" afterPath="$PROJECT_DIR$/resource/character/unit/c10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c11.png" afterPath="$PROJECT_DIR$/resource/character/unit/c11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c12.png" afterPath="$PROJECT_DIR$/resource/character/unit/c12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c13.png" afterPath="$PROJECT_DIR$/resource/character/unit/c13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c14.png" afterPath="$PROJECT_DIR$/resource/character/unit/c14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c15.png" afterPath="$PROJECT_DIR$/resource/character/unit/c15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c16.png" afterPath="$PROJECT_DIR$/resource/character/unit/c16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c17.png" afterPath="$PROJECT_DIR$/resource/character/unit/c17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c18.png" afterPath="$PROJECT_DIR$/resource/character/unit/c18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c19.png" afterPath="$PROJECT_DIR$/resource/character/unit/c19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c2.png" afterPath="$PROJECT_DIR$/resource/character/unit/c2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c20.png" afterPath="$PROJECT_DIR$/resource/character/unit/c20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c21.png" afterPath="$PROJECT_DIR$/resource/character/unit/c21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c22.png" afterPath="$PROJECT_DIR$/resource/character/unit/c22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c23.png" afterPath="$PROJECT_DIR$/resource/character/unit/c23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c24.png" afterPath="$PROJECT_DIR$/resource/character/unit/c24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c25.png" afterPath="$PROJECT_DIR$/resource/character/unit/c25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c26.png" afterPath="$PROJECT_DIR$/resource/character/unit/c26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c27.png" afterPath="$PROJECT_DIR$/resource/character/unit/c27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c28.png" afterPath="$PROJECT_DIR$/resource/character/unit/c28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c29.png" afterPath="$PROJECT_DIR$/resource/character/unit/c29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c3.png" afterPath="$PROJECT_DIR$/resource/character/unit/c3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c30.png" afterPath="$PROJECT_DIR$/resource/character/unit/c30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c31.png" afterPath="$PROJECT_DIR$/resource/character/unit/c31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c32.png" afterPath="$PROJECT_DIR$/resource/character/unit/c32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c33.png" afterPath="$PROJECT_DIR$/resource/character/unit/c33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c34.png" afterPath="$PROJECT_DIR$/resource/character/unit/c34.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c35.png" afterPath="$PROJECT_DIR$/resource/character/unit/c35.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c36.png" afterPath="$PROJECT_DIR$/resource/character/unit/c36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c37.png" afterPath="$PROJECT_DIR$/resource/character/unit/c37.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c38.png" afterPath="$PROJECT_DIR$/resource/character/unit/c38.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c39.png" afterPath="$PROJECT_DIR$/resource/character/unit/c39.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c4.png" afterPath="$PROJECT_DIR$/resource/character/unit/c4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c40.png" afterPath="$PROJECT_DIR$/resource/character/unit/c40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c41.png" afterPath="$PROJECT_DIR$/resource/character/unit/c41.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c5.png" afterPath="$PROJECT_DIR$/resource/character/unit/c5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c6.png" afterPath="$PROJECT_DIR$/resource/character/unit/c6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c7.png" afterPath="$PROJECT_DIR$/resource/character/unit/c7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c8.png" afterPath="$PROJECT_DIR$/resource/character/unit/c8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/character/unit/c9.png" afterPath="$PROJECT_DIR$/resource/character/unit/c9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Object.py" afterPath="$PROJECT_DIR$/Object.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +58,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+            <state relative-caret-position="28">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -30,8 +70,8 @@
       <file leaf-file-name="Object.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+            <state relative-caret-position="644">
+              <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -91,12 +131,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/2DGP/2017-2DGP/Labs/Lab05" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -149,6 +189,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -180,6 +221,60 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -272,16 +367,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state relative-caret-position="644">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        <state relative-caret-position="28">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
