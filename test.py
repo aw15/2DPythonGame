@@ -46,8 +46,8 @@ while(True):
         wall_image.draw(500,50+i*100)
     handle_events()
     if(isClick):
-        unitList[0].SetMoving(mouseInput)
-    unitList[0].update(2,1)
+        unitList[3].SetMoving(mouseInput)
+    unitList[3].update(1)
     delay(0.08)
     update_canvas()
 close_canvas()
