@@ -8,4 +8,4 @@ def timeTick():
     cur_time = time.time()
     elapsedTime = cur_time - prev_time
     prev_time = cur_time
-    return elapsedTime
+    return elapsedTime*1000

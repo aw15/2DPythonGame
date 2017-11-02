@@ -15,12 +15,12 @@ class Object:
         self.horizental=True
         self.moving= [0,0]
         self.animation_dir = 0
-    def SetPosition(self,x,y):
-        self.x = x
-        self.y = y
-    def SetMoving(self, mouseInput):
-        deltaX = mouseInput[0] -  self.x
-        deltaY = mouseInput[1] - self.y
+    def SetPosition(self,pos):
+        self.x = pos[0]
+        self.y = pos[1]
+    def Move(self, input):
+        deltaX = input[0] -  self.x
+        deltaY = input[1] - self.y
         length =  math.sqrt(pow(deltaX,2) + pow(deltaY,2))
         self.moving = (deltaX)/length, (deltaY)/length
         if deltaY>0:
@@ -61,3 +61,20 @@ class Object:
             self.animationIndex = 0
         self.x =self.x+ self.moving[0]*elapsedTime
         self.y =self.y+ self.moving[1]*elapsedTime
+        print(self.moving)
+
+class Enemy(Object):
+    def __init__(self, name):
+        super().__init__(name)
+        self.target = ()
+        pass
+    def FindNearPoint(self,attackPoints):
+        nearest = 10000
+        for pos in attackPoints:
+            print(pos)
+            currentDistance = math.sqrt(pow((self.x+pos[0]),2)+pow((self.y+pos[1]),2))
+            if(nearest>currentDistance):
+                nearest = currentDistance
+                self.target = pos
+        self.Move(self.target)
+        pass
