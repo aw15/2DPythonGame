@@ -1,7 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76271f8b-0219-40ed-b7dd-d981199eb585" name="Default" comment="" />
+    <list default="true" id="76271f8b-0219-40ed-b7dd-d981199eb585" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/MainGuy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/armor lancer/armor lancer down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/armor lancer/armor lancer side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/armor lancer/armor lancer up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/bat/bat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/axe beast/axe beast down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/axe beast/axe beast side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/axe beast/axe beast up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/beast down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/beast side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/beast up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/giant/giant grab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/giant/giant idle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/giant/giant throw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/giant/giant walk.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/mace beast/mace beast down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/mace beast/mace beast side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/mace beast/mace beast up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/sword beast/sword beast down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/sword beast/sword beast side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/beasts/sword beast/sword beast up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/bones/blade bones/blade bones down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/bones/blade bones/blade bones side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/bones/blade bones/blade bones up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/bones/bones down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/bones/bones side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/bones/bones up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/cloak/cloak down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/cloak/cloak side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/cloak/cloak up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/eyebat/eyebat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/fang/fang down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/fang/fang side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/fang/fang up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/feather/feather down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/feather/feather side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/feather/feather up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/floateye/floateye down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/floateye/floateye side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/floateye/floateye up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/floatskull/floatskull.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/goo/goo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/goo/goobaby.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/hoodfang/hoodfang down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/hoodfang/hoodfang side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/hoodfang/hoodfang up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/horns/horns down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/horns/horns side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/horns/horns up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/kultist/kultist down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/kultist/kultist side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/kultist/kultist up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/link/not link/notlink down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/link/not link/notlink side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/link/not link/notlink up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/link/not link/notlink use.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/link/not link/notlink.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/locks/locks down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/locks/locks side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/locks/locks up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/smushroom/smushroom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/spider/spider idle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/spider/spider jump.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/spider/spider walk.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/swarm/swarm 1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/swarm/swarm 2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/swarm/swarm 3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/whelp/whelp fire.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/enemy/whelp/whelp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/character/george.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/amg1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/amg1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/amg1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/amg1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/avt1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/avt1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/avt1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/avt1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/bmg1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/bmg1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/bmg1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/bmg1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/chr1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/chr1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/chr1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/chr1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/dvl1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/dvl1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/dvl1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/dvl1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/ftr1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/ftr1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/ftr1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/ftr1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/gsd1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/gsd1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/gsd1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/gsd1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/isd1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/isd1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/isd1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/isd1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/jli1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/jli1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/jli1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/jli1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt2_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt2_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt2_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/knt2_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc3_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc3_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc3_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc3_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc5_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc5_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc5_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc5_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc6_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc6_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc6_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc6_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc9_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc9_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc9_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/npc9_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/scr1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/scr1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/scr1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/scr1_fr2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/skl1_bk1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/skl1_bk2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/skl1_fr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resource/last-guardian-sprites/skl1_fr2.gif" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/colony-db32.png" afterPath="$PROJECT_DIR$/resource/colony-db32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Maingame.py" afterPath="$PROJECT_DIR$/Maingame.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Object.py" afterPath="$PROJECT_DIR$/Object.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spawner.py" afterPath="$PROJECT_DIR$/Spawner.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +162,8 @@
       <file leaf-file-name="utility.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="0">
+              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -24,32 +172,34 @@
       <file leaf-file-name="Object.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1736">
-              <caret line="62" column="50" lean-forward="false" selection-start-line="62" selection-start-column="50" selection-end-line="63" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Maingame.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Maingame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+            <state relative-caret-position="1064">
+              <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
-                <element signature="e#248#751#0" expanded="false" />
-                <element signature="e#949#971#0" expanded="false" />
+                <element signature="e#1410#1530#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spawner.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Maingame.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Maingame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1220">
+              <caret line="68" column="28" lean-forward="false" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#128#631#0" expanded="false" />
+                <element signature="e#1936#1958#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spawner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Spawner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="240">
+              <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -91,14 +241,14 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/allies.py" />
         <option value="$PROJECT_DIR$/enemy.py" />
-        <option value="$PROJECT_DIR$/Maingame.py" />
         <option value="$PROJECT_DIR$/utility.py" />
         <option value="$PROJECT_DIR$/Object.py" />
+        <option value="$PROJECT_DIR$/Maingame.py" />
         <option value="$PROJECT_DIR$/Spawner.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1030" />
@@ -121,7 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,6 +283,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,8 +339,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -230,11 +379,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Maingame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spawner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Object.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1736">
           <caret line="62" column="50" lean-forward="true" selection-start-line="62" selection-start-column="50" selection-end-line="63" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -254,8 +453,8 @@
           <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -280,7 +479,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1036">
           <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -290,8 +491,8 @@
           <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -302,8 +503,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -312,7 +513,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1036">
           <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -322,8 +525,8 @@
           <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -339,6 +542,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -346,7 +550,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -356,8 +562,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -366,6 +572,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -373,7 +580,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -383,8 +592,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -393,7 +602,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -403,8 +614,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -413,7 +624,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -423,8 +636,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -433,7 +646,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -443,8 +658,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -453,7 +668,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -463,8 +680,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -473,7 +690,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -483,8 +702,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -493,7 +712,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
           <caret line="45" column="80" lean-forward="false" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="80" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -503,8 +724,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -513,7 +734,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -523,8 +746,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -533,7 +756,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -543,8 +768,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -553,7 +778,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -563,8 +790,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -573,7 +800,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -593,8 +822,17 @@
     </entry>
     <entry file="file://C:/python/Lib/site-packages/pico2d.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="2648">
+          <caret line="265" column="21" lean-forward="true" selection-start-line="265" selection-start-column="21" selection-end-line="265" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -606,40 +844,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Spawner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1736">
-          <caret line="62" column="50" lean-forward="false" selection-start-line="62" selection-start-column="50" selection-end-line="63" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="1064">
+          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+          <folding>
+            <element signature="e#1410#1530#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Maingame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        <state relative-caret-position="1220">
+          <caret line="68" column="28" lean-forward="false" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#248#751#0" expanded="false" />
-            <element signature="e#949#971#0" expanded="false" />
+            <element signature="e#128#631#0" expanded="false" />
+            <element signature="e#1936#1958#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spawner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
