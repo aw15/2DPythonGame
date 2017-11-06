@@ -1,8 +1,10 @@
 from pico2d import *
 
 class Object:
-    def __init__(self):
-
+    BUILDING=0
+    ENEMY=1
+    ALLIES=2
+    def __init__(self,type):
         self.animationIndex = 0
         self.up = []
         self.down = []
@@ -14,6 +16,8 @@ class Object:
         self.maxIndex =0
         self.moving= [0,0]
         self.animation_dir = 0
+        self.hp =0
+        self.type=type
     def SetPosition(self,pos):
         self.x = pos[0]
         self.y = pos[1]
@@ -30,14 +34,13 @@ class Object:
 
         else:
             self.animation_dir=1
-
     def FindNearPoint(self, attackPoints):
         nearest = 10000
         target = ()
         currentDistance = 0
         for pos in attackPoints:
             currentDistance = math.sqrt(pow((self.x - pos[0]), 2) + pow((self.y - pos[1]), 2))
-            print(pos,"  :  ",currentDistance)
+            #print(pos,"  :  ",currentDistance)
             if (nearest > currentDistance):
                 nearest = currentDistance
                 target = pos
@@ -45,12 +48,6 @@ class Object:
     def SetSprite(self,image ,index):
         self.image = image
         self.maxIndex = index
-    def SetDirection(self,up,down,right, left, increase):
-        self.up = up
-        self.down = down
-        self.left=left
-        self.right = right
-        self.increase = increase
     def update(self,  elapsedTime):
         if (self.animation_dir == 0):
             self.image[self.animationIndex].draw(self.x, self.y)
@@ -62,3 +59,7 @@ class Object:
             self.animationIndex = 0
         self.x =self.x+ self.moving[0]*elapsedTime
         self.y =self.y+ self.moving[1]*elapsedTime
+    def isDead(self):
+        if self.hp<=0:
+            return True
+        return False

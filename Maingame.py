@@ -4,8 +4,9 @@ import Spawner
 mouseInput = [0,0]
 isClick = False
 isMotion =False
+effectIndex =0
 
-
+open_canvas()
 
 #InputEvent
 def handle_events():
@@ -28,7 +29,14 @@ def handle_events():
 
 
 
-open_canvas()
+
+
+def FireEffect():
+    global effectIndex
+    fireEffect = load_image(r'resource\effect\fire.png')
+    fireEffect.clip_draw(0, 128*effectIndex, 128, 128, 300, 300)
+    effectIndex= (effectIndex+1)%8
+
 
 alliesList = []
 enemyList = []
@@ -39,6 +47,8 @@ building_small2 = load_image(r'resource\map\small2.png')
 building_medium = load_image(r'resource\map\medium.png')
 building_wall_height = load_image(r'resource\map\wall_height.png')
 building_wall_width = load_image(r'resource\map\wall_width.png')
+
+
 for i in range(1,11):
     filename = '\c'+str(i)+'-'
     temp1 = load_image(r'resource\character\allies'+filename+'1.gif')
@@ -57,6 +67,7 @@ for i in range(1,9):
 Spawner.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
 #0 = UP 1 = DOWN 2=RIGHT 3= LEFT---------mainloop
 
+
 while(True):
     clear_canvas()
     # for i in range(0,8):
@@ -65,10 +76,11 @@ while(True):
     # for i in range(0,6):
     #     wall_image.draw(500,50+i*100)
     handle_events()
-    building_small1.draw(200,200)
-    building_big.draw(300, 300)
+
+    FireEffect()
     Spawner.SpawnEnemy()
     delay(0.1)
+
     update_canvas()
 close_canvas()
 

@@ -2,6 +2,10 @@ import Object
 import utility
 import random
 
+BUILDING=0
+ENEMY=1
+ALLIES=2
+
 #unit initialize---------------------------------------------------------
 
 enemyImageList =[]
@@ -29,8 +33,7 @@ def SpawnEnemy():
     if five<5:
         five= five+1
         timePass = 0
-        newObject = Object.Object()
-        newObject.SetDirection([32, 96], [32, 32], [32, 64], [32, 0], [32, 32])
+        newObject = Object.Object(ENEMY)
         newObject.SetSprite(enemyImageList[4],1)
         index = random.randint(0,3)
         newObject.SetPosition(spawnPoint[index])
