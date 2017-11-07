@@ -22,7 +22,7 @@ def handle_events():
             #print('motion')
         elif event.type == SDL_MOUSEBUTTONDOWN:
             isClick = True
-           # print('click')
+            print('click')
             mouseInput[0] = event.x
             mouseInput[1] = 600 - event.y
 
@@ -64,21 +64,27 @@ for i in range(1,9):
     temp3 = load_image(r'resource\character\enemy'+filename+'3.png')
     temp4 = load_image(r'resource\character\enemy'+filename+'4.png')
     enemyList.append([temp1,temp2,temp3,temp4])
+
 Spawner.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
 #0 = UP 1 = DOWN 2=RIGHT 3= LEFT---------mainloop
 
 
+
 while(True):
     clear_canvas()
-    # for i in range(0,8):
-    #     for j in range(0,6):
-    #         image.draw(50+i*100,50+j*100)
-    # for i in range(0,6):
-    #     wall_image.draw(500,50+i*100)
+    if(isClick):
+        if(mouseInput<[320,570] and mouseInput > [280,520]):
+            Spawner.Recruit(mouseInput)
+        if (mouseInput < [420, 570] and mouseInput > [380, 520]):
+            print(mouseInput)
+        isClick=False
+
+    building_small1.draw(300, 550)
+    building_small2.draw(400, 550)
     handle_events()
 
     FireEffect()
-    Spawner.SpawnEnemy()
+    Spawner.Update()
     delay(0.1)
 
     update_canvas()
