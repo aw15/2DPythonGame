@@ -1,4 +1,4 @@
-from pico2d import *
+﻿from pico2d import *
 import Spawner
 
 mouseInput = [0,0]
@@ -6,7 +6,7 @@ isClick = False
 isMotion =False
 effectIndex =0
 
-open_canvas()
+open_canvas(sync=True)
 
 #InputEvent
 def handle_events():
@@ -25,19 +25,25 @@ def handle_events():
             print('click')
             mouseInput[0] = event.x
             mouseInput[1] = 600 - event.y
+gold = 0
+stage =1
+font = load_font('resource\HMKMMAG.ttf',20)
+def SetText():
+    global  stage,gold
+    font.draw(550, 580, '스테이지: %d' %stage, (1, 1, 1))
+    font.draw(700, 580, '골드: %d G' %gold, (255, 255, 0))
 
 
 
 
-
-
+fireEffect = load_image(r'resource\effect\fire.png')
 def FireEffect():
-    global effectIndex
-    fireEffect = load_image(r'resource\effect\fire.png')
+    global effectIndex,fireEffect
+
     fireEffect.clip_draw(0, 128*effectIndex, 128, 128, 300, 300)
     effectIndex= (effectIndex+1)%8
 
-
+#----------------------------------모델 불러오기------------------------------------------------------
 alliesList = []
 enemyList = []
 
@@ -48,13 +54,17 @@ building_medium = load_image(r'resource\map\medium.png')
 building_wall_height = load_image(r'resource\map\wall_height.png')
 building_wall_width = load_image(r'resource\map\wall_width.png')
 
+def SetEnviroment():
+    building_small1.draw(300, 550)
+    for i in range(0,10):
+        building_wall_width.draw(134*i,400)
 
 for i in range(1,11):
     filename = '\c'+str(i)+'-'
-    temp1 = load_image(r'resource\character\allies'+filename+'1.gif')
-    temp2 = load_image(r'resource\character\allies'+filename+'2.gif')
-    temp3 = load_image(r'resource\character\allies'+filename+'3.gif')
-    temp4 = load_image(r'resource\character\allies'+filename+'4.gif')
+    temp1 = load_image(r'resource\character\allies'+filename+'1.png')
+    temp2 = load_image(r'resource\character\allies'+filename+'2.png')
+    temp3 = load_image(r'resource\character\allies'+filename+'3.png')
+    temp4 = load_image(r'resource\character\allies'+filename+'4.png')
     alliesList.append([temp1,temp2,temp3,temp4])
 
 for i in range(1,9):
@@ -66,27 +76,21 @@ for i in range(1,9):
     enemyList.append([temp1,temp2,temp3,temp4])
 
 Spawner.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
+
 #0 = UP 1 = DOWN 2=RIGHT 3= LEFT---------mainloop
-
-
-
 while(True):
     clear_canvas()
+    handle_events()
     if(isClick):
         if(mouseInput<[320,570] and mouseInput > [280,520]):
             Spawner.Recruit(mouseInput)
         if (mouseInput < [420, 570] and mouseInput > [380, 520]):
             print(mouseInput)
         isClick=False
+    SetEnviroment()
+    SetText()
 
-    building_small1.draw(300, 550)
-    building_small2.draw(400, 550)
-    handle_events()
-
-    FireEffect()
     Spawner.Update()
-    delay(0.1)
-
     update_canvas()
 close_canvas()
 

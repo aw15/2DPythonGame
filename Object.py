@@ -4,6 +4,21 @@ class Object:
     BUILDING=0
     ENEMY=1
     ALLIES=2
+
+    PIXEL_PER_METER = (10.0 / 0.1)
+    RUN_SPEED_KMPH = 10.0
+    RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
+    RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
+    RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
+
+    TIME_PER_ACTION = 0.5
+    ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
+    FRAMES_PER_ACTION = 1
+
+    MOVE_UP = 0
+    MOVE_DOWN = 1
+    STOP = 2
+
     def __init__(self,type):
         self.animationIndex = 0
         self.up = []
@@ -15,13 +30,14 @@ class Object:
         self.y = 0
         self.maxIndex =0
         self.moving= [0,0]
-        self.animation_dir = 0
+        self.total_frames = 0.0
+        self.state = self.MOVE_UP
         self.hp =0
         self.type=type
     def SetPosition(self,pos):
         self.x = pos[0]
         self.y = pos[1]
-    def Move(self, input, distance=None):
+    def Move(self, input):
         deltaX = input[0] -  self.x
         deltaY = input[1] - self.y
         length =  math.sqrt(pow(deltaX,2) + pow(deltaY,2))
@@ -30,10 +46,23 @@ class Object:
             return
         self.moving = (deltaX)/length, (deltaY)/length
         if deltaY>0:
-            self.animation_dir = 0
+            self.MOVE_UP
 
         else:
-            self.animation_dir=1
+            self.MOVE_DOWN
+
+    def Move(self):
+        deltaX = 0
+        deltaY = 400 - self.y
+        length = math.sqrt(pow(deltaX, 2) + pow(deltaY, 2))
+        if length < 10:
+            self.moving = [0, 0]
+            return
+        self.moving = (deltaX) / length, (deltaY) / length
+        if deltaY > 0:
+            self.MOVE_UP
+        else:
+            self.MOVE_DOWN
     def FindNearPoint(self, attackPoints):
         nearest = 10000
         target = ()
@@ -44,21 +73,19 @@ class Object:
             if (nearest > currentDistance):
                 nearest = currentDistance
                 target = pos
-        self.Move(target)
     def SetSprite(self,image ,index):
         self.image = image
         self.maxIndex = index
     def update(self,  elapsedTime):
-        if (self.animation_dir == 0):
+        if (self.MOVE_UP):
             self.image[self.animationIndex].draw(self.x, self.y)
-        if (self.animation_dir == 1):
+        if (self.MOVE_DOWN):
             self.image[self.animationIndex+2].draw( self.x, self.y)
-        self.animationIndex = self.animationIndex+ 1
-        #print(self.animationIndex)
-        if(self.animationIndex > self.maxIndex):
-            self.animationIndex = 0
-        self.x =self.x+ self.moving[0]*elapsedTime
-        self.y =self.y+ self.moving[1]*elapsedTime
+        self.total_frames += Object.FRAMES_PER_ACTION * Object.ACTION_PER_TIME * elapsedTime
+        self.animationIndex = int(self.total_frames) % Object.FRAMES_PER_ACTION
+
+        self.x =self.x+ self.moving[0]*self.RUN_SPEED_PPS*elapsedTime
+        self.y =self.y+ self.moving[1]*self.RUN_SPEED_PPS*elapsedTime
     def isDead(self):
         if self.hp<=0:
             return True
