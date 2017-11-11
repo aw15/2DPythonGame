@@ -81,17 +81,13 @@ Spawner.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
 while(True):
     clear_canvas()
     handle_events()
-    if(isClick):
-        if(mouseInput<[320,570] and mouseInput > [280,520]):
-            Spawner.Recruit(mouseInput)
-        if (mouseInput < [420, 570] and mouseInput > [380, 520]):
-            print(mouseInput)
-        isClick=False
+    Spawner.SetInput(mouseInput,isClick)
     SetEnviroment()
     SetText()
-
     Spawner.Update()
     update_canvas()
+
+    isClick =False
 close_canvas()
 
 
