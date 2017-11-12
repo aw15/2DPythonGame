@@ -4,8 +4,8 @@ class Object:
     ENEMY=1
     ALLIES=2
 
-    PIXEL_PER_METER = (1.0 / 1)
-    RUN_SPEED_KMPH = 15.0
+    PIXEL_PER_METER = (1.0 / 1.0)
+    RUN_SPEED_KMPH = 150.0
     RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
     RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
     RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
@@ -16,32 +16,31 @@ class Object:
     MOVE_DOWN = 1
     STOP = 2
 
-    def __init__(self,type):
+    def __init__(self,type,hp=0):
         self.animationIndex = 0
-        self.up = []
-        self.down = []
-        self.left = []
-        self.right = []
-        self.increase = []
         self.x = 0
         self.y = 0
         self.maxIndex =0
         self.moving= [0,0]
         self.total_frames = 0.0
         self.state = self.MOVE_DOWN
-        self.hp =0
+        self.hp =hp
         self.type=type
+        self.input =[0,0]
     def SetPosition(self,pos):
         self.x = pos[0]
         self.y = pos[1]
     def GetPosition(self):
         return (self.x,self.y)
-    def AlliesMove(self, input):
-        deltaX = input[0] -  self.x
-        deltaY = input[1] - self.y
+    def SetMouseInput(self, input):
+        self.input = input
+    def AlliesMove(self):
+        deltaX = self.input[0] -  self.x
+        deltaY = self.input[1] - self.y
         length =  math.sqrt(pow(deltaX,2) + pow(deltaY,2))
         if length < 10:
             self.moving = [0,0]
+            self.state =self.STOP
             return
         self.moving = (deltaX)/length, (deltaY)/length
         if deltaY>0:
@@ -50,7 +49,7 @@ class Object:
             self.MOVE_DOWN
     def Move(self):
         deltaX = 0
-        deltaY = 400 - self.y
+        deltaY = 390 - self.y
         length = math.sqrt(pow(deltaX, 2) + pow(deltaY, 2))
         if length < 10:
             self.moving = [0, 0]
@@ -70,6 +69,8 @@ class Object:
             if (nearest > currentDistance):
                 nearest = currentDistance
                 target = pos
+    def Damage(self,damage):
+        self.hp = self.hp - damage
     def SetSprite(self,image ,index):
         self.image = image
         self.maxIndex = index
@@ -87,10 +88,11 @@ class Object:
 
         self.x =self.x+ self.moving[0]*self.RUN_SPEED_PPS*elapsedTime
         if(self.type == Object.ALLIES):
-            self.y = max(420,self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime)
+            self.y = max(430,self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime)
         else:
             self.y = self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime
     def isDead(self):
         if self.hp<=0:
             return True
         return False
+
