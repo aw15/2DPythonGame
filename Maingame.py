@@ -3,7 +3,6 @@ import Spawner
 
 mouseInput = [0,0]
 isClick = False
-isSpace =False
 isMotion =False
 effectIndex =0
 
@@ -11,7 +10,7 @@ open_canvas(sync=True)
 
 #InputEvent
 def handle_events():
-    global mouseInput, isClick, isMotion, isSpace
+    global mouseInput, isClick, isMotion
     events = get_events()
     for event in events:
         if event.type == SDL_QUIT:
@@ -25,8 +24,9 @@ def handle_events():
             isClick = True
             mouseInput[0] = event.x
             mouseInput[1] = 600 - event.y
+            Spawner.SetInput(mouseInput, isClick)
         elif event.type ==SDL_KEYDOWN and event.key ==SDLK_SPACE:
-            isSpace = True
+            pass
 gold = 0
 stage =1
 font = load_font('resource\HMKMMAG.ttf',20)
@@ -83,13 +83,12 @@ Spawner.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
 while(True):
     clear_canvas()
     handle_events()
-    Spawner.SetInput(mouseInput,isClick,isSpace)
+    draw_rectangle(mouseInput[0] - 10, mouseInput[1] - 15, mouseInput[0] + 10, mouseInput[1] + 15)
     SetEnviroment()
     SetText()
     Spawner.Update()
     update_canvas()
 
-    isSpace =False
     isClick =False
 close_canvas()
 
