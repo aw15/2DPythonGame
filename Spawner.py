@@ -66,7 +66,8 @@ def SetInput(mouseInput,click):
                 if(unitPosition[0]>mouseInput[0]-10 and unitPosition[1]>mouseInput[1]-15 and unitPosition[0]<mouseInput[0]+10 and unitPosition[1]<mouseInput[1]+15):
                     activeUnit = unit
                     break
-            activeUnit.Input(mouseInput)
+            if(activeUnit != None):
+                activeUnit.Input(mouseInput)
 
 def Update():
     global enemyList, alliesList, timePass, current_time,elapsedTime

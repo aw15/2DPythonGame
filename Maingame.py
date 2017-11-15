@@ -39,12 +39,14 @@ def SetText():
 
 
 fireEffect = load_image(r'resource\effect\fire.png')
+explosion = load_image(r'resource\effect\e3.png')
 def FireEffect():
     global effectIndex,fireEffect
-
     fireEffect.clip_draw(0, 128*effectIndex, 128, 128, 300, 300)
     effectIndex= (effectIndex+1)%8
-
+def Explosion():
+    global explosion
+    explosion.clip_draw(0,92,90,92,300,300)
 #----------------------------------모델 불러오기------------------------------------------------------
 alliesList = []
 enemyList = []
