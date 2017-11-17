@@ -18,7 +18,7 @@ class Object:
     MOVE_DOWN = 1
     STOP = 2
 
-    def __init__(self,type,hp=0):
+    def __init__(self,type,image,tag):
         self.animationIndex = 0
         self.x = 0
         self.y = 0
@@ -26,8 +26,9 @@ class Object:
         self.moving= [0,0]
         self.total_frames = 0.0
         self.state = self.MOVE_DOWN
-        self.hp =hp
+        self.image = image
         self.type=type
+        self.tag = tag
     def SetPosition(self,pos):
         self.x = pos[0]
         self.y = pos[1]
@@ -39,9 +40,6 @@ class Object:
 
     def Damage(self,damage):
         self.hp = self.hp - damage
-    def SetSprite(self,image ,index):
-        self.image = image
-        self.maxIndex = index
     def update(self,  elapsedTime):
         if (self.state == self.MOVE_UP):
             self.image[self.animationIndex].draw(self.x, self.y)
@@ -60,8 +58,8 @@ class Object:
         return False
 
 class Ally(Object):
-    def __init__(self,type,hp=0):
-        super(Ally, self).__init__(type, hp)
+    def __init__(self,type,tag,image):
+        super(Ally, self).__init__(type, tag,image)
         self.input = (0,440)
         pass
     def update(self,elapsedTime):
@@ -84,12 +82,14 @@ class Ally(Object):
             self.state = self.MOVE_UP
         else:
             self.state = self.MOVE_DOWN
+    def Attack(self):
+
 
 
 
 class Enemy(Object):
-    def __init__(self,type, hp=0):
-        super(Enemy,self).__init__(type, hp)
+    def __init__(self,type, image,tag=0):
+        super(Enemy,self).__init__(type,image ,tag)
 
     def Move(self):
         deltaX = 0

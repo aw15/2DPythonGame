@@ -1,5 +1,6 @@
 ﻿from pico2d import *
 import Spawner
+import Effect
 
 mouseInput = [0,0]
 isClick = False
@@ -36,17 +37,20 @@ def SetText():
     font.draw(700, 580, '골드: %d G' %gold, (255, 255, 0))
 
 
+#------------------이펙트 설정 ------------------------------------------------
 
+explosion1 = load_image(r'resource\effect\e1.png')
+explosion2 = load_image(r'resource\effect\e2.png')
+beamHit1 = load_image(r'resource\effect\r1.png')
+beamHit2 = load_image(r'resource\effect\r2.png')
+beamHit3 = load_image(r'resource\effect\r3.png')
 
-fireEffect = load_image(r'resource\effect\fire.png')
-explosion = load_image(r'resource\effect\e3.png')
-def FireEffect():
-    global effectIndex,fireEffect
-    fireEffect.clip_draw(0, 128*effectIndex, 128, 128, 300, 300)
-    effectIndex= (effectIndex+1)%8
-def Explosion():
-    global explosion
-    explosion.clip_draw(0,92,90,92,300,300)
+beam1 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.png'))
+beam2 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.png'))
+beam3 = (load_image(r'resource\effect\l5.png'),load_image(r'resource\effect\l6.png'))
+
+Effect.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
+
 #----------------------------------모델 불러오기------------------------------------------------------
 alliesList = []
 enemyList = []

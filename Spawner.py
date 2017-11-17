@@ -1,5 +1,5 @@
 import Object
-import utility
+import Effect
 import random
 from pico2d import *
 
@@ -34,8 +34,7 @@ def SetUnitList(allies, enemy):
 def SpawnEnemy():
     global  enemyImageList, enemyList, ENEMY_ATTACKPOINT
     choose = random.randint(0,7)
-    newObject = Object.Enemy(ENEMY,(choose+1)*ENEMY_ATTACKPOINT)
-    newObject.SetSprite(enemyImageList[choose],1)
+    newObject = Object.Enemy(ENEMY,enemyImageList[choose],0)
     x = random.randint(20,750)
     newObject.SetPosition([x,-20])
     enemyList.append(newObject)
@@ -45,8 +44,7 @@ def SpawnEnemy():
 def Recruit(mouseInput):
     global alliesImageList,  alliesList, ALLIES_ATTACKPOINT
     choose = random.randint(0,9)
-    newObject = Object.Ally(ALLIES,(choose+1)*ALLIES_ATTACKPOINT)
-    newObject.SetSprite(alliesImageList[choose], 1)
+    newObject = Object.Ally(ALLIES,alliesImageList[choose],0)
     newObject.SetPosition((mouseInput[0],mouseInput[1]-50))
     alliesList.append(newObject)
 
