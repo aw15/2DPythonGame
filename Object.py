@@ -1,5 +1,8 @@
 from pico2d import *
 import copy
+from math import *
+import Effect
+
 
 class Object:
     BUILDING=0
@@ -45,6 +48,7 @@ class Object:
             self.image[self.animationIndex].draw(self.x, self.y)
         if (self.state == self.MOVE_DOWN):
             self.image[self.animationIndex+2].draw( self.x, self.y)
+
         self.total_frames +=elapsedTime
         if(self.total_frames>self.TIME_PER_ACTION):
             self.animationIndex += 1
@@ -58,15 +62,20 @@ class Object:
         return False
 
 class Ally(Object):
-    def __init__(self,type,tag,image):
-        super(Ally, self).__init__(type, tag,image)
+    RANGE=0
+    ATTACK_TYPE=1
+    def __init__(self,type,image,tag=0):
+        super(Ally, self).__init__(type, image, tag)
         self.input = (0,440)
-        pass
-    def update(self,elapsedTime):
+        if tag==0:
+            self.stat = [80,0]
+    def update(self,elapsedTime, enemyList):
         super().update(elapsedTime)
         self.Move()
+        self.Attack(enemyList,elapsedTime)
         self.y = max(430, self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime)
         self.x =self.x+ self.moving[0]*self.RUN_SPEED_PPS*elapsedTime
+
     def Input(self,mouseinput):
         self.input = copy.deepcopy(mouseinput)
     def Move(self):
@@ -82,7 +91,13 @@ class Ally(Object):
             self.state = self.MOVE_UP
         else:
             self.state = self.MOVE_DOWN
-    def Attack(self):
+    def Attack(self, enemyList,elapsedTime):
+        for enemy in enemyList:
+            enemyPos = enemy.GetPosition()
+            distance = sqrt(pow(enemyPos[0]-self.x,2)+pow(enemyPos[1] - self.y,2))
+            if(self.stat[self.RANGE]>distance):
+                Effect.effectManager.Explosion(elapsedTime,self.x,self.y-distance,self.stat[self.ATTACK_TYPE])
+
 
 
 

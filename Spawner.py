@@ -24,6 +24,7 @@ elapsedTime = None
 enemyList = []
 alliesList = []
 
+
 def SetUnitList(allies, enemy):
     global enemyImageList, alliesImageList
     enemyImageList = enemy
@@ -59,8 +60,6 @@ def SetInput(mouseInput,click):
         else:
             for unit in alliesList:
                 unitPosition = unit.GetPosition()
-                print(unitPosition)
-                print(mouseInput)
                 if(unitPosition[0]>mouseInput[0]-10 and unitPosition[1]>mouseInput[1]-15 and unitPosition[0]<mouseInput[0]+10 and unitPosition[1]<mouseInput[1]+15):
                     activeUnit = unit
                     break
@@ -80,8 +79,9 @@ def Update():
         enemy.update(elapsedTime)
         current_pos = enemy.GetPosition()
         if(current_pos[1]>380):#벽에 가까이 오면 성벽 체력 달기
-            wallHp = wallHp - (enemy.hp*elapsedTime)
+            #wallHp = wallHp - (enemy.hp*elapsedTime)
+            pass
     for allies in alliesList:
-        allies.update(elapsedTime)
+        allies.update(elapsedTime,enemyList)
 
     current_time+=elapsedTime

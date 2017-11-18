@@ -6,6 +6,7 @@ mouseInput = [0,0]
 isClick = False
 isMotion =False
 effectIndex =0
+effectManager = Effect.Effect()
 
 open_canvas(sync=True)
 
@@ -49,7 +50,7 @@ beam1 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.p
 beam2 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.png'))
 beam3 = (load_image(r'resource\effect\l5.png'),load_image(r'resource\effect\l6.png'))
 
-Effect.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
+effectManager.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
 
 #----------------------------------모델 불러오기------------------------------------------------------
 alliesList = []
@@ -84,7 +85,6 @@ for i in range(1,9):
     enemyList.append([temp1,temp2,temp3,temp4])
 
 Spawner.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
-
 #0 = UP 1 = DOWN 2=RIGHT 3= LEFT---------mainloop
 while(True):
     clear_canvas()

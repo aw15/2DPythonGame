@@ -1,34 +1,45 @@
 
 
-explosionImages = []
-beamHitImage = []
-beamImage = []
+
+class Effect:
+    explosionImage = []
+    beamHitImage = []
+    beamImage = []
+
+    def __init__(self):
+        print('effect Ready')
+
+        self.explosionIndex = 0
+        self.beamHitIndex = 0
+        self.projectileIndex = 0
+        pass
+
+    def SetEffectImage(self,explosion, beamHit,beam):
+        print(explosion)
+        Effect.explosionImage = explosion
+        Effect.beamHitImage = beamHit
+        Effect.beamImage = beam
+        print(Effect.explosionImage)
+
+    def Explosion(self,elapsedTime,x,y,choose):
+        self.explosionIndex= self.explosionIndex +elapsedTime
+        Effect.explosionImage[choose].clip_draw(60*int(self.explosionIndex),0,60,60,x,y)
+        self.explosionIndex = (self.explosionIndex) % 5
 
 
-def SetEffectImage(explosion, beamHit,beam):
-    global explosionImages, beamHitImage, beamImage
-    explosionImages=explosion
-    beamHitImage = beamHit
-    beamImage = beam
+    def Projectile(self,elapsedTime,x,y,choose):
+        self.projectileIndex = self.projectileIndex +elapsedTime
+        if self.projectileIndex<1:
+            Effect.beamImage[choose][0].draw(x,y)
+        else:
+            Effect.beamImage[choose][1].draw(x, y)
+        self.projectileIndex = Effect.projectileIndex%2
 
-def FireEffect():
-    global effectIndex, fireEffect
-    fireEffect.clip_draw(0, 128*effectIndex, 128, 128, 300, 300)
-    effectIndex= (effectIndex+1)%8
 
-explosionIndex = 0
-def Explosion(elapsedTime,x,y):
-    global explosion, explosionIndex
-    explosionIndex= explosionIndex +elapsedTime
-    explosion.clip_draw(60*int(explosionIndex),0,60,60,x,y)
-    explosionIndex = (explosionIndex) % 5
+    def BeamHit(self,elapsedTime,x,y,choose):
+        self.beamHitIndex= self.beamHitIndex +elapsedTime
+        Effect.beamHitImage[choose].clip_draw(33*int( self.beamHitIndex),0,33,31,x,y)
+        self.beamHitIndex = ( self.beamHitIndex) % 7
 
-projectileIndex = 0
-def Projectile(index,elapsedTime,x,y):
-    global projectileIndex
-    projectileIndex = projectileIndex +elapsedTime
-    if projectileIndex<1:
-        beamImage[index][1].draw(x,y)
-    else:
-        beamImage[index][1].draw(x, y)
-    projectileIndex = projectileIndex%2
+
+effectManager = Effect()
