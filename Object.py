@@ -96,7 +96,7 @@ class Ally(Object):
             enemyPos = enemy.GetPosition()
             distance = sqrt(pow(enemyPos[0]-self.x,2)+pow(enemyPos[1] - self.y,2))
             if(self.stat[self.RANGE]>distance):
-                Effect.effectManager.Explosion(elapsedTime,self.x,self.y-distance,self.stat[self.ATTACK_TYPE])
+                Effect.effectManager.ResisterPosition(enemyPos)
 
 
 

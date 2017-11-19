@@ -83,5 +83,5 @@ def Update():
             pass
     for allies in alliesList:
         allies.update(elapsedTime,enemyList)
-
+    Effect.effectManager.Render(elapsedTime)
     current_time+=elapsedTime

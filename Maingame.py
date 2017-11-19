@@ -6,7 +6,6 @@ mouseInput = [0,0]
 isClick = False
 isMotion =False
 effectIndex =0
-effectManager = Effect.Effect()
 
 open_canvas(sync=True)
 
@@ -50,7 +49,7 @@ beam1 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.p
 beam2 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.png'))
 beam3 = (load_image(r'resource\effect\l5.png'),load_image(r'resource\effect\l6.png'))
 
-effectManager.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
+Effect.effectManager.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
 
 #----------------------------------모델 불러오기------------------------------------------------------
 alliesList = []

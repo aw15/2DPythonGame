@@ -12,17 +12,26 @@ class Effect:
         self.explosionIndex = 0
         self.beamHitIndex = 0
         self.projectileIndex = 0
+        self.effectPosition=set([])
+        self.effectIndex = set([])
         pass
+    def ResisterPosition(self,position):
+        self.effectPosition.add(position)
+
+    def Render(self,elapsedTime):
+        self.explosionIndex = self.explosionIndex + elapsedTime
+        for pos in self.effectPosition:
+            self.Explosion(elapsedTime,pos[0],pos[1],1)
+        self.effectPosition.clear()
+        self.effectIndex.clear()
 
     def SetEffectImage(self,explosion, beamHit,beam):
-        print(explosion)
+
         Effect.explosionImage = explosion
         Effect.beamHitImage = beamHit
         Effect.beamImage = beam
-        print(Effect.explosionImage)
 
     def Explosion(self,elapsedTime,x,y,choose):
-        self.explosionIndex= self.explosionIndex +elapsedTime
         Effect.explosionImage[choose].clip_draw(60*int(self.explosionIndex),0,60,60,x,y)
         self.explosionIndex = (self.explosionIndex) % 5
 
