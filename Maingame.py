@@ -63,23 +63,8 @@ def SetEnviroment():
     for i in range(0,10):
         building_wall_width.draw(134*i,400)
 
-for i in range(1,11):
-    filename = '\c'+str(i)+'-'
-    temp1 = load_image(r'resource\character\allies'+filename+'1.png')
-    temp2 = load_image(r'resource\character\allies'+filename+'2.png')
-    temp3 = load_image(r'resource\character\allies'+filename+'3.png')
-    temp4 = load_image(r'resource\character\allies'+filename+'4.png')
-    alliesList.append([temp1,temp2,temp3,temp4])
 
-for i in range(1,9):
-    filename = '\e'+str(i)+'-'
-    temp1 = load_image(r'resource\character\enemy'+filename+'1.png')
-    temp2 = load_image(r'resource\character\enemy'+filename+'2.png')
-    temp3 = load_image(r'resource\character\enemy'+filename+'3.png')
-    temp4 = load_image(r'resource\character\enemy'+filename+'4.png')
-    enemyList.append([temp1,temp2,temp3,temp4])
 
-ObjectManager.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
 #0 = UP 1 = DOWN 2=RIGHT 3= LEFT---------mainloop
 while(True):
     clear_canvas()

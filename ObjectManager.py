@@ -15,76 +15,77 @@ class ObjectManager:
     ENEMY_ATTACKPOINT =10
     ALLIES_ATTACKPOINT =10
 
-    enemyImageList = None
-    alliesImageList = None
+
     wallHp = 10000
 
-
-    timePass=0
-    current_time = get_time()
-    elapsedTime = None
-
-    enemyList = []
-    alliesList = []
     def __init__(self):
-           
+        self.enemyList = []
+        self.alliesList = []
+        self.alliesImageList=[]
+        self.enemyImageList=[]
+        self.activeUnit = None
+        self.timePass = 0
+        for i in range(1, 11):
+            filename = '\c' + str(i) + '-'
+            temp1 = load_image(r'resource\character\allies' + filename + '1.png')
+            temp2 = load_image(r'resource\character\allies' + filename + '2.png')
+            temp3 = load_image(r'resource\character\allies' + filename + '3.png')
+            temp4 = load_image(r'resource\character\allies' + filename + '4.png')
+            self.alliesImageList.append([temp1, temp2, temp3, temp4])
 
-    def SetUnitList(allies, enemy):
-        global enemyImageList, alliesImageList
-        enemyImageList = enemy
-        alliesImageList = allies
+        for i in range(1, 9):
+            filename = '\e' + str(i) + '-'
+            temp1 = load_image(r'resource\character\enemy' + filename + '1.png')
+            temp2 = load_image(r'resource\character\enemy' + filename + '2.png')
+            temp3 = load_image(r'resource\character\enemy' + filename + '3.png')
+            temp4 = load_image(r'resource\character\enemy' + filename + '4.png')
+            self.enemyImageList.append([temp1, temp2, temp3, temp4])
 
+    def handle_events(self,event):
+        if (event.type) == (SDL_MOUSEBUTTONDOWN):
+            mouseInput = [event.x, 600 - event.y]
+            if (mouseInput < [320, 550] and mouseInput[0] > 280 and mouseInput[1] > 520):
+                self.Recruit(mouseInput)
+            else:
+                for unit in self.alliesList:
+                    unitPosition = unit.GetPosition()
+                    if (unitPosition[0] > mouseInput[0] - 10 and unitPosition[1] > mouseInput[1] - 15 and unitPosition[
+                        0] < mouseInput[0] + 10 and unitPosition[1] < mouseInput[1] + 15):
+                        self.activeUnit = unit
+                        break
+                if (self.activeUnit != None):
+                    self.activeUnit.Input(mouseInput)
 
+    def Draw(self,elapsedTime):
+        pass
 
-    def SpawnEnemy():
-        global  enemyImageList, enemyList, ENEMY_ATTACKPOINT
+    def SpawnEnemy(self):
         choose = random.randint(0,7)
-        newObject = Object.Enemy(ENEMY,enemyImageList[choose],0)
+        newObject = Object.Enemy(self.enemyImageList[choose],0)
         x = random.randint(20,750)
         newObject.SetPosition([x,-20])
-        enemyList.append(newObject)
+        self.enemyList.append(newObject)
 
 
 
-    def Recruit(mouseInput):
-        global alliesImageList,  alliesList, ALLIES_ATTACKPOINT
+    def Recruit(self,mouseInput):
         choose = random.randint(0,9)
-        newObject = Object.Ally(ALLIES,alliesImageList[choose],0)
+        newObject = Object.Ally(self.alliesImageList[choose],0)
         newObject.SetPosition((mouseInput[0],mouseInput[1]-50))
-        alliesList.append(newObject)
+        self.alliesList.append(newObject)
 
 
-    activeUnit = None
-    def SetInput(mouseInput,click):
-        global activeUnit,alliesList
-        global isMoving#유닛 뽑은 상태가 아닌 유닛 선택후 이동 상태인지
-        if(click):
-            if(mouseInput < [320, 550] and mouseInput[0] > 280 and mouseInput[1] > 520):
-                Recruit(mouseInput)
-            else:
-                for unit in alliesList:
-                    unitPosition = unit.GetPosition()
-                    if(unitPosition[0]>mouseInput[0]-10 and unitPosition[1]>mouseInput[1]-15 and unitPosition[0]<mouseInput[0]+10 and unitPosition[1]<mouseInput[1]+15):
-                        activeUnit = unit
-                        break
-                if(activeUnit != None):
-                    activeUnit.Input(mouseInput)
+    def Update(self, elapsedTime):
+        self.timePass = self.timePass +elapsedTime
+        if(self.timePass>1):
+            self.SpawnEnemy()
+            self.timePass = 0
 
-    def Update():
-        global enemyList, alliesList, timePass, current_time,elapsedTime
-        global wallHp
-        elapsedTime = get_time()-current_time
-        timePass = timePass +elapsedTime
-        if(timePass>1):
-            SpawnEnemy()
-            timePass = 0
-
-        for enemy in enemyList:
+        for enemy in self.enemyList:
             enemy.update(elapsedTime)
             current_pos = enemy.GetPosition()
             if(current_pos[1]>380):#벽에 가까이 오면 성벽 체력 달기
                 #wallHp = wallHp - (enemy.hp*elapsedTime)
                 pass
-        for allies in alliesList:
-            allies.update(elapsedTime,enemyList)
-        current_time+=elapsedTime
+        for allies in self.alliesList:
+            allies.update(elapsedTime,self.enemyList)

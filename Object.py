@@ -63,8 +63,8 @@ class Object:
 class Ally(Object):
     RANGE=0
     ATTACK_TYPE=1
-    def __init__(self,type,image,tag=0):
-        super(Ally, self).__init__(type, image, tag)
+    def __init__(self,image,tag=0):
+        super(Ally, self).__init__(0 , image, tag)
         self.input = (0,440)
         if tag==0:
             self.stat = [80,0]
@@ -102,8 +102,8 @@ class Ally(Object):
 
 
 class Enemy(Object):
-    def __init__(self,type, image,tag=0):
-        super(Enemy,self).__init__(type,image ,tag)
+    def __init__(self, image,tag=0):
+        super(Enemy,self).__init__(0,image ,tag)
 
     def Move(self):
         deltaX = 0

@@ -16,6 +16,7 @@ objectManager = None
 def create_world():
     global effectManager, objectManager
     effectManager = Effect()
+    objectManager = ObjectManager()
     pass
 
 
@@ -53,6 +54,9 @@ def handle_events(frame_time):
         else:
             if (event.type, event.key) == (SDL_KEYDOWN, SDLK_ESCAPE):
                 game_framework.quit()
+            else:
+                objectManager.handle_events(event)
+                pass
 
 
 
@@ -60,14 +64,19 @@ def handle_events(frame_time):
 
 def update(frame_time):
     global effectManager,objectManager
+    objectManager.Update(frame_time)
+    effectManager.Update(frame_time)
     pass
 
 
 def draw(frame_time):
+    global effectManager, objectManager
     clear_canvas()
-    global effectManager,objectManager
+    objectManager.Draw(frame_time)
     effectManager.Draw(frame_time)
-    effectManager.Update(frame_time)
+
+
+
     pass
 
     update_canvas()
