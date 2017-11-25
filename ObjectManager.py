@@ -1,5 +1,6 @@
 import Object
 import random
+from Enemy import *
 from pico2d import *
 
 
@@ -57,11 +58,13 @@ class ObjectManager:
                     self.activeUnit.Input(mouseInput)
 
     def Draw(self,elapsedTime):
+        for enemy in self.enemyList:
+            enemy.Draw(elapsedTime)
         pass
 
     def SpawnEnemy(self):
         choose = random.randint(0,7)
-        newObject = Object.Enemy(self.enemyImageList[choose],0)
+        newObject = Enemy(self.enemyImageList[choose],0)
         x = random.randint(20,750)
         newObject.SetPosition([x,-20])
         self.enemyList.append(newObject)
@@ -80,9 +83,8 @@ class ObjectManager:
         if(self.timePass>1):
             self.SpawnEnemy()
             self.timePass = 0
-
         for enemy in self.enemyList:
-            enemy.update(elapsedTime)
+            enemy.Update(elapsedTime)
             current_pos = enemy.GetPosition()
             if(current_pos[1]>380):#벽에 가까이 오면 성벽 체력 달기
                 #wallHp = wallHp - (enemy.hp*elapsedTime)
