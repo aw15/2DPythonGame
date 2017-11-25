@@ -1,10 +1,10 @@
 
-
+from pico2d import *
 
 class Effect:
     explosionImage = []
-    beamHitImage = []
-    beamImage = []
+    beamHitImage = None
+    beamImage = None
 
     def __init__(self):
         print('effect Ready')
@@ -14,12 +14,12 @@ class Effect:
         self.projectileIndex = 0
         self.effectPosition=set([])
         self.effectIndex = set([])
-        pass
+        Effect.explosionImage = load_image(r'resource\effect\e1.png')
     def ResisterPosition(self,position):
         self.effectPosition.add(position)
 
     def Render(self,elapsedTime):
-        self.explosionIndex = self.explosionIndex + elapsedTime
+        self.explosionIndex = self.explosionIndex + (elapsedTime*5)
         for pos in self.effectPosition:
             self.Explosion(elapsedTime,pos[0],pos[1],1)
         self.effectPosition.clear()
@@ -50,5 +50,3 @@ class Effect:
         Effect.beamHitImage[choose].clip_draw(33*int( self.beamHitIndex),0,33,31,x,y)
         self.beamHitIndex = ( self.beamHitIndex) % 7
 
-
-effectManager = Effect()

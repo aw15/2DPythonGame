@@ -1,5 +1,4 @@
 import Object
-import Effect
 import random
 from pico2d import *
 
@@ -83,5 +82,4 @@ def Update():
             pass
     for allies in alliesList:
         allies.update(elapsedTime,enemyList)
-    Effect.effectManager.Render(elapsedTime)
     current_time+=elapsedTime

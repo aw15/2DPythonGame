@@ -1,7 +1,6 @@
 from pico2d import *
 import copy
 from math import *
-import Effect
 
 
 class Object:
@@ -95,8 +94,8 @@ class Ally(Object):
         for enemy in enemyList:
             enemyPos = enemy.GetPosition()
             distance = sqrt(pow(enemyPos[0]-self.x,2)+pow(enemyPos[1] - self.y,2))
-            if(self.stat[self.RANGE]>distance):
-                Effect.effectManager.ResisterPosition(enemyPos)
+            # if(self.stat[self.RANGE]>distance):
+            #     Effect.effectManager.ResisterPosition(enemyPos)
 
 
 

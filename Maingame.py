@@ -1,6 +1,10 @@
-﻿from pico2d import *
+﻿
+from pico2d import *
 import Spawner
-import Effect
+from Effect import *
+
+
+effectManager = Effect()
 
 mouseInput = [0,0]
 isClick = False
@@ -49,7 +53,7 @@ beam1 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.p
 beam2 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.png'))
 beam3 = (load_image(r'resource\effect\l5.png'),load_image(r'resource\effect\l6.png'))
 
-Effect.effectManager.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
+#Effect.effectManager.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
 
 #----------------------------------모델 불러오기------------------------------------------------------
 alliesList = []
@@ -95,6 +99,9 @@ while(True):
     update_canvas()
 
     isClick =False
+
+
+
 close_canvas()
 
 
