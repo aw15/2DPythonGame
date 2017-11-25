@@ -1,4 +1,4 @@
 import game_framework
-import collision
+import mainState
 
-game_framework.run(collision)
+game_framework.run(mainState)

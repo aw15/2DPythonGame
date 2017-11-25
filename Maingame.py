@@ -1,7 +1,7 @@
 ﻿
 from pico2d import *
-import Spawner
-from Effect import *
+import ObjectManager
+from EffectManager import *
 
 
 effectManager = Effect()
@@ -29,7 +29,7 @@ def handle_events():
             isClick = True
             mouseInput[0] = event.x
             mouseInput[1] = 600 - event.y
-            Spawner.SetInput(mouseInput, isClick)
+            ObjectManager.SetInput(mouseInput, isClick)
         elif event.type ==SDL_KEYDOWN and event.key ==SDLK_SPACE:
             pass
 gold = 0
@@ -43,15 +43,7 @@ def SetText():
 
 #------------------이펙트 설정 ------------------------------------------------
 
-explosion1 = load_image(r'resource\effect\e1.png')
-explosion2 = load_image(r'resource\effect\e2.png')
-beamHit1 = load_image(r'resource\effect\r1.png')
-beamHit2 = load_image(r'resource\effect\r2.png')
-beamHit3 = load_image(r'resource\effect\r3.png')
 
-beam1 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.png'))
-beam2 = (load_image(r'resource\effect\l3.png'),load_image(r'resource\effect\l4.png'))
-beam3 = (load_image(r'resource\effect\l5.png'),load_image(r'resource\effect\l6.png'))
 
 #Effect.effectManager.SetEffectImage([explosion1,explosion2],[beamHit1,beamHit2,beamHit3], [beam1,beam2,beam3])
 
@@ -87,7 +79,7 @@ for i in range(1,9):
     temp4 = load_image(r'resource\character\enemy'+filename+'4.png')
     enemyList.append([temp1,temp2,temp3,temp4])
 
-Spawner.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
+ObjectManager.SetUnitList(alliesList, enemyList)#유닛 리스트 설정
 #0 = UP 1 = DOWN 2=RIGHT 3= LEFT---------mainloop
 while(True):
     clear_canvas()
@@ -95,7 +87,7 @@ while(True):
     draw_rectangle(mouseInput[0] - 10, mouseInput[1] - 15, mouseInput[0] + 10, mouseInput[1] + 15)
     SetEnviroment()
     SetText()
-    Spawner.Update()
+    ObjectManager.Update()
     update_canvas()
 
     isClick =False
