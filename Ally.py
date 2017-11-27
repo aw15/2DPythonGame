@@ -18,18 +18,30 @@ class Ally:
     MOVE_DOWN = 1
     STOP = 2
 
-    def __init__(self,image,tag=0):
+    imageList = []
+
+    def __init__(self,tag=0):
+        if len(Ally.imageList) == 0:
+            for i in range(1, 11):
+                filename = '\c' + str(i) + '-'
+                temp1 = load_image(r'resource\character\allies' + filename + '1.png')
+                temp2 = load_image(r'resource\character\allies' + filename + '2.png')
+                temp3 = load_image(r'resource\character\allies' + filename + '3.png')
+                temp4 = load_image(r'resource\character\allies' + filename + '4.png')
+                Ally.imageList.append([temp1, temp2, temp3, temp4])
+
         self.animationIndex = 0
         self.x = 0
         self.y = 0
         self.moving = [0, 0]
         self.total_frames = 0.0
         self.state = self.MOVE_DOWN
-        self.image = image
         self.tag = tag
         self.mousePosition = (0,440)
         if tag==0:
             self.stat = [80,0]
+            self.image = Ally.imageList[0]
+
     def SetPosition(self,pos):
         self.x = pos[0]
         self.y = pos[1]

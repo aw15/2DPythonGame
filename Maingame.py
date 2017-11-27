@@ -32,13 +32,7 @@ def handle_events():
             ObjectManager.SetInput(mouseInput, isClick)
         elif event.type ==SDL_KEYDOWN and event.key ==SDLK_SPACE:
             pass
-gold = 0
-stage =1
-font = load_font('resource\HMKMMAG.ttf',20)
-def SetText():
-    global  stage,gold
-    font.draw(550, 580, '스테이지: %d' %stage, (1, 1, 1))
-    font.draw(700, 580, '골드: %d G' %gold, (255, 255, 0))
+
 
 
 #------------------이펙트 설정 ------------------------------------------------

@@ -18,17 +18,29 @@ class Enemy:
     MOVE_DOWN = 1
     STOP = 2
 
-    def __init__(self, image, tag):
+    imageList = []
+    def __init__(self,tag):
+        if(len(Enemy.imageList)==0):
+            for i in range(1, 9):
+                filename = '\e' + str(i) + '-'
+                temp1 = load_image(r'resource\character\enemy' + filename + '1.png')
+                temp2 = load_image(r'resource\character\enemy' + filename + '2.png')
+                temp3 = load_image(r'resource\character\enemy' + filename + '3.png')
+                temp4 = load_image(r'resource\character\enemy' + filename + '4.png')
+                Enemy.imageList.append([temp1, temp2, temp3, temp4])
+
         self.animationIndex = 0
         self.x = 0
         self.y = 0
-        self.maxIndex = 0
         self.moving = [0, 0]
         self.total_frames = 0.0
         self.state = self.MOVE_DOWN
-        self.image = image
-        self.type = type
-        self.tag = tag
+
+
+        if tag == 0:
+            self.image = Enemy.imageList[0]
+            self.attack = 10
+            self.hp = 10
 
     def SetPosition(self, pos):
         self.x = pos[0]
@@ -42,9 +54,8 @@ class Enemy:
 
     def Damage(self, damage):
         self.hp = self.hp - damage
-
-    def Update(self, elapsedTime):
-        pass
+    def Attack(self):
+        return self.attack
     def Draw(self, elapsedTime):
         if (self.state == self.MOVE_UP):
             self.image[self.animationIndex].draw(self.x, self.y)

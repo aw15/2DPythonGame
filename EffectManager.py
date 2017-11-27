@@ -26,7 +26,7 @@ class Effect:
         self.DrawExplosion(100,100,1)
         self.DrawBeamHit(200,200,2)
         self.DrawProjectile(300,300,1)
-    def Update(self,elapsedTime):
+    def Update(self,elapsedTime,effectType, effectPosition):
         self.explosionIndex = (self.explosionIndex +elapsedTime*5)%5
         self.beamHitIndex = (self.beamHitIndex + elapsedTime*5)%7
         self.projectileIndex = (self.projectileIndex + elapsedTime)%2
