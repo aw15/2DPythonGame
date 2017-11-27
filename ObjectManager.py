@@ -1,4 +1,4 @@
-import Object
+from Ally import *
 import random
 from Enemy import *
 from pico2d import *
@@ -55,11 +55,13 @@ class ObjectManager:
                         self.activeUnit = unit
                         break
                 if (self.activeUnit != None):
-                    self.activeUnit.Input(mouseInput)
+                    self.activeUnit.SetMoveDirection(mouseInput)
 
     def Draw(self,elapsedTime):
         for enemy in self.enemyList:
             enemy.Draw(elapsedTime)
+        for ally in self.alliesList:
+            ally.Draw(elapsedTime)
         pass
 
     def SpawnEnemy(self):
@@ -73,21 +75,21 @@ class ObjectManager:
 
     def Recruit(self,mouseInput):
         choose = random.randint(0,9)
-        newObject = Object.Ally(self.alliesImageList[choose],0)
+        newObject = Ally(self.alliesImageList[choose], 0)
         newObject.SetPosition((mouseInput[0],mouseInput[1]-50))
         self.alliesList.append(newObject)
 
 
-    def Update(self, elapsedTime):
-        self.timePass = self.timePass +elapsedTime
+    def Update(self, frameTime):
+        self.timePass = self.timePass +frameTime
         if(self.timePass>1):
             self.SpawnEnemy()
             self.timePass = 0
         for enemy in self.enemyList:
-            enemy.Update(elapsedTime)
+            enemy.Update(frameTime)
             current_pos = enemy.GetPosition()
             if(current_pos[1]>380):#벽에 가까이 오면 성벽 체력 달기
                 #wallHp = wallHp - (enemy.hp*elapsedTime)
                 pass
         for allies in self.alliesList:
-            allies.update(elapsedTime,self.enemyList)
+            allies.Update(frameTime)
