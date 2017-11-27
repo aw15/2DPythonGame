@@ -1,22 +1,25 @@
 from pico2d import *
 
 class World:
-    buildingImage = []
-    wallImage = []
+
 
 
     def __init__(self):
-        if(len(World.buildingImage)==0):
-            World.buildingImage.append( load_image(r'resource\map\big.png'))
-            World.buildingImage.append(load_image(r'resource\map\small1.png'))
-            World.buildingImage.append(load_image(r'resource\map\small2.png'))
-            World.buildingImage.append(load_image(r'resource\map\medium.png'))
-            World.wallImage.append(load_image(r'resource\map\wall_height.png'))
-            World.wallImage.append(load_image(r'resource\map\wall_width.png'))
+        self.buildingImage = None
+        self.wallImage = None
+        if(self.buildingImage==None):
+            self.wallImage=[]
+            self.buildingImage=[]
+            self.buildingImage.append( load_image(r'resource\map\big.png'))
+            self.buildingImage.append(load_image(r'resource\map\small1.png'))
+            self.buildingImage.append(load_image(r'resource\map\small2.png'))
+            self.buildingImage.append(load_image(r'resource\map\medium.png'))
+            self.wallImage.append(load_image(r'resource\map\wall_height.png'))
+            self.wallImage.append(load_image(r'resource\map\wall_width.png'))
 
 
     def Draw(self):
-        World.buildingImage[1].draw(300, 550)
+        self.buildingImage[1].draw(300, 550)
         for i in range(0, 10):
-            World.wallImage[1].draw(134 * i, 400)
+            self.wallImage[1].draw(134 * i, 400)
 

@@ -9,7 +9,6 @@ from World import *
 
 name = "mainState"
 
-effectManager = None
 objectManager = None
 world = None
 
@@ -64,16 +63,17 @@ def handle_events(frame_time):
 
 
 def update(frame_time):
-    global effectManager,objectManager
+    global world,objectManager
     objectManager.Update(frame_time)
     pass
 
 
 def draw(frame_time):
-    global effectManager, objectManager
+    global world, objectManager
     clear_canvas()
-    objectManager.Draw(frame_time)
     world.Draw()
+    objectManager.Draw(frame_time)
+
 
     update_canvas()
 

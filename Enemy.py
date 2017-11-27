@@ -18,9 +18,11 @@ class Enemy:
     MOVE_DOWN = 1
     STOP = 2
 
-    imageList = []
+    imageList = None
     def __init__(self,tag):
-        if(len(Enemy.imageList)==0):
+        if Enemy.imageList==None:
+            Enemy.imageList = []
+
             for i in range(1, 9):
                 filename = '\e' + str(i) + '-'
                 temp1 = load_image(r'resource\character\enemy' + filename + '1.png')

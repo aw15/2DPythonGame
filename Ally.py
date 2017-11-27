@@ -18,10 +18,12 @@ class Ally:
     MOVE_DOWN = 1
     STOP = 2
 
-    imageList = []
+    imageList = None
 
     def __init__(self,tag=0):
-        if len(Ally.imageList) == 0:
+        if Ally.imageList == None:
+            Ally.imageList = []
+
             for i in range(1, 11):
                 filename = '\c' + str(i) + '-'
                 temp1 = load_image(r'resource\character\allies' + filename + '1.png')
