@@ -1,6 +1,7 @@
 from pico2d import *
 import copy
 from math import *
+import json
 
 class Ally:
     RANGE=0
@@ -19,11 +20,11 @@ class Ally:
     STOP = 2
 
     imageList = None
+    statList = None
 
     def __init__(self,tag=0):
         if Ally.imageList == None:
             Ally.imageList = []
-
             for i in range(1, 11):
                 filename = '\c' + str(i) + '-'
                 temp1 = load_image(r'resource\character\allies' + filename + '1.png')
@@ -31,7 +32,9 @@ class Ally:
                 temp3 = load_image(r'resource\character\allies' + filename + '3.png')
                 temp4 = load_image(r'resource\character\allies' + filename + '4.png')
                 Ally.imageList.append([temp1, temp2, temp3, temp4])
-
+            allyStatFile = open('Ally.json','r')
+            Ally.statList= json.load(allyStatFile)
+            allyStatFile.close()
         self.animationIndex = 0
         self.x = 0
         self.y = 0

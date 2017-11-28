@@ -1,5 +1,5 @@
 from pico2d import *
-import copy
+import json
 from math import *
 
 
@@ -19,6 +19,7 @@ class Enemy:
     STOP = 2
 
     imageList = None
+    statList = None
     def __init__(self,tag):
         if Enemy.imageList==None:
             Enemy.imageList = []
@@ -30,7 +31,9 @@ class Enemy:
                 temp3 = load_image(r'resource\character\enemy' + filename + '3.png')
                 temp4 = load_image(r'resource\character\enemy' + filename + '4.png')
                 Enemy.imageList.append([temp1, temp2, temp3, temp4])
-
+            enemyStatText = open('Enemy.json','r')
+            Enemy.staList = json.load(enemyStatText)
+            enemyStatText.close()
         self.animationIndex = 0
         self.x = 0
         self.y = 0

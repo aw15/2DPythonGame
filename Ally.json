@@ -1,0 +1,13 @@
+[
+    {"attackType":1,"attack":10} ,
+    {"attackType":1,"attack":20} ,
+    {"attackType":1,"attack":30} ,
+    {"attackType":2,"attack":100} ,
+    {"attackType":2,"attack":150} ,
+    {"attackType":2,"attack":200} ,
+    {"attackType":3,"attack":400} ,
+    {"attackType":3,"attack":500} ,
+    {"attackType":4,"attack":600} ,
+    {"attackType":4,"attack":1000} ,
+    {"attackType":5,"attack":1500}
+]
