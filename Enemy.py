@@ -24,8 +24,9 @@ class Enemy:
         if Enemy.imageList==None:
             Enemy.imageList = []
 
-            for i in range(1, 9):
+            for i in range(1,9):
                 filename = '\e' + str(i) + '-'
+                print(filename)
                 temp1 = load_image(r'resource\character\enemy' + filename + '1.png')
                 temp2 = load_image(r'resource\character\enemy' + filename + '2.png')
                 temp3 = load_image(r'resource\character\enemy' + filename + '3.png')
@@ -44,23 +45,22 @@ class Enemy:
 
         if tag == 0:
             self.image = Enemy.imageList[0]
-            self.attack = 10
+            self.gold = 10
             self.hp = 10
+            self.attackPoint = 10
+
 
     def SetPosition(self, pos):
         self.x = pos[0]
         self.y = pos[1]
 
-    def GetPosition(self):
-        return (self.x, self.y)
 
     def Move(self):
         pass
 
     def Damage(self, damage):
         self.hp = self.hp - damage
-    def Attack(self):
-        return self.attack
+
     def Draw(self, elapsedTime):
         if (self.state == self.MOVE_UP):
             self.image[self.animationIndex].draw(self.x, self.y)
@@ -74,10 +74,6 @@ class Enemy:
         if self.animationIndex > 1:
             self.animationIndex = 0
 
-    def IsDead(self):
-        if self.hp <= 0:
-            return True
-        return False
 
     def Update(self, elapsedTime):
         deltaX = 0

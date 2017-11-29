@@ -25,8 +25,10 @@ class Ally:
     def __init__(self,tag=0):
         if Ally.imageList == None:
             Ally.imageList = []
-            for i in range(1, 11):
+            for i in range(1, 6):
+
                 filename = '\c' + str(i) + '-'
+                print(filename)
                 temp1 = load_image(r'resource\character\allies' + filename + '1.png')
                 temp2 = load_image(r'resource\character\allies' + filename + '2.png')
                 temp3 = load_image(r'resource\character\allies' + filename + '3.png')
@@ -41,18 +43,15 @@ class Ally:
         self.moving = [0, 0]
         self.total_frames = 0.0
         self.state = self.MOVE_DOWN
-        self.tag = tag
         self.mousePosition = (0,440)
-        if tag==0:
-            self.stat = [80,0]
-            self.image = Ally.imageList[0]
+        self.image = Ally.imageList[tag]
+        self.effectType = Ally.statList[tag]["effectType"]
+        self.attackPoint = Ally.statList[tag]["attackPoint"]
 
     def SetPosition(self,pos):
         self.x = pos[0]
         self.y = pos[1]
         self.mousePosition = pos
-    def GetPosition(self):
-        return (self.x,self.y)
 
     def Update(self,frameTime):
         self.total_frames += frameTime

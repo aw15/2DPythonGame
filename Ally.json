@@ -1,13 +1,13 @@
 [
-    {"attackType":1,"attack":10} ,
-    {"attackType":1,"attack":20} ,
-    {"attackType":1,"attack":30} ,
-    {"attackType":2,"attack":100} ,
-    {"attackType":2,"attack":150} ,
-    {"attackType":2,"attack":200} ,
-    {"attackType":3,"attack":400} ,
-    {"attackType":3,"attack":500} ,
-    {"attackType":4,"attack":600} ,
-    {"attackType":4,"attack":1000} ,
-    {"attackType":5,"attack":1500}
+    {"effectType":0,"attackPoint":10} ,
+    {"effectType":0,"attackPoint":20} ,
+    {"effectType":0,"attackPoint":30} ,
+    {"effectType":0,"attackPoint":100} ,
+    {"effectType":0,"attackPoint":150} ,
+    {"effectType":0,"attackPoint":200} ,
+    {"effectType":0,"attackPoint":400} ,
+    {"effectType":0,"attackPoint":500} ,
+    {"effectType":0,"attackPoint":600} ,
+    {"effectType":0,"attackPoint":1000} ,
+    {"effectType":0,"attackPoint":1500}
 ]
