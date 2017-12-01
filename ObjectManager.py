@@ -21,9 +21,9 @@ class ObjectManager:
         self.timePass = 0
         self.effectManager = Effect()
         self.wallHp = 10000
-        self.gold = 0
+        self.gold = 100
         self.stage = 1
-        self.enemySpawnRange = 0,3
+        self.enemySpawnRange = 0,2
         self.font = load_font('resource\HMKMMAG.ttf', 20)
         self.deadCount = 0
         self.win = False
@@ -31,7 +31,7 @@ class ObjectManager:
     def handle_events(self,event):
         if (event.type) == (SDL_MOUSEBUTTONDOWN):
             mouseInput = [event.x, 600 - event.y]
-            if (mouseInput < [320, 550] and mouseInput[0] > 280 and mouseInput[1] > 520):
+            if (mouseInput < [320, 550] and mouseInput[0] > 280 and mouseInput[1] > 520)and self.gold>20:
                 self.Recruit(mouseInput)
             else:
                 for unit in self.alliesList:
@@ -55,10 +55,11 @@ class ObjectManager:
 
 
     def Recruit(self,mouseInput):
-        choose = random.randint(0,9)
-        newObject = Ally(0)
+        choose = random.randint(0,2)
+        newObject = Ally(choose)
         newObject.SetPosition((mouseInput[0],mouseInput[1]-50))
         self.alliesList.append(newObject)
+        self.gold -=20
 
     def Draw(self,frameTime):
         for enemy in self.enemyList:
@@ -77,6 +78,7 @@ class ObjectManager:
                     self.gold += enemy.gold
         self.font.draw(550, 580, '스테이지: %d' % self.stage, (1, 1, 1))
         self.font.draw(700, 580, '골드: %d G' % self.gold, (255, 255, 0))
+        self.font.draw(300, 580, '성 체력: %d ' % self.wallHp, (255, 255, 0))
 
     def Update(self, frameTime):
         self.timePass = self.timePass +frameTime
@@ -92,21 +94,20 @@ class ObjectManager:
         self.effectManager.Update(frameTime)
         if self.deadCount>100:
             self.stage+=1
-            self.enemySpawnRange = 2,5
-        elif self.deadCount>200:
-            self.stage+=1
-            self.enemySpawnRange = 4, 6
-        elif self.deadCount>300:
-            self.stage+=1
-            self.enemySpawnRange = 6, 8
-        elif self.deadCount>400:
-            self.stage+=1
-            self.enemySpawnRange = 6, 11
-        elif self.deadCount>500:
-            self.stage+=1
-            self.enemySpawnRange = 12, 14
-        elif self.deadCount>600:
-            pass
+            self.deadCount = 0
+
+        if self.stage == 1:
+            self.enemySpawnRange = 0,4
+        elif self.stage == 2:
+            self.enemySpawnRange = 2,6
+        elif self.stage == 3:
+            self.enemySpawnRange = 4,8
+        elif self.stage == 4:
+            self.enemySpawnRange = 6,10
+        elif self.stage == 5:
+            self.enemySpawnRange = 8, 12
+        elif self.stage == 6:
+            self.enemySpawnRange = 10, 15
 
     def WallDamage(self,damage):
         self.wallHp -= damage

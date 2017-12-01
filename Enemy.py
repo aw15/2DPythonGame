@@ -24,7 +24,7 @@ class Enemy:
         if Enemy.imageList==None:
             Enemy.imageList = []
 
-            for i in range(1,9):
+            for i in range(1,16):
                 filename = '\e' + str(i) + '-'
                 print(filename)
                 temp1 = load_image(r'resource\character\enemy' + filename + '1.png')
@@ -41,13 +41,10 @@ class Enemy:
         self.moving = [0, 0]
         self.total_frames = 0.0
         self.state = self.MOVE_DOWN
-
-
-        if tag == 0:
-            self.image = Enemy.imageList[0]
-            self.gold = 10
-            self.hp = 10
-            self.attackPoint = 10
+        self.image = Enemy.imageList[tag]
+        self.gold = 10
+        self.hp = 10
+        self.attackPoint = 10
 
 
     def SetPosition(self, pos):
