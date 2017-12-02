@@ -19,21 +19,21 @@ class Enemy:
     STOP = 2
 
     imageList = None
-    statList = None
+    statList = []
     def __init__(self,tag):
-        if Enemy.imageList==None:
+        if Enemy.imageList == None:
             Enemy.imageList = []
 
             for i in range(1,16):
                 filename = '\e' + str(i) + '-'
-                print(filename)
                 temp1 = load_image(r'resource\character\enemy' + filename + '1.png')
                 temp2 = load_image(r'resource\character\enemy' + filename + '2.png')
                 temp3 = load_image(r'resource\character\enemy' + filename + '3.png')
                 temp4 = load_image(r'resource\character\enemy' + filename + '4.png')
                 Enemy.imageList.append([temp1, temp2, temp3, temp4])
             enemyStatText = open('Enemy.json','r')
-            Enemy.staList = json.load(enemyStatText)
+            Enemy.statList = json.load(enemyStatText)
+            print(Enemy.statList)
             enemyStatText.close()
         self.animationIndex = 0
         self.x = 0
@@ -42,9 +42,10 @@ class Enemy:
         self.total_frames = 0.0
         self.state = self.MOVE_DOWN
         self.image = Enemy.imageList[tag]
-        self.gold = 10
-        self.hp = 10
-        self.attackPoint = 10
+
+        self.gold = Enemy.statList[tag]["gold"]
+        self.hp = Enemy.statList[tag]["hp"]
+        self.attackPoint = Enemy.statList[tag]["attack"]
 
 
     def SetPosition(self, pos):

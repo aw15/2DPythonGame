@@ -23,6 +23,7 @@ class ObjectManager:
         self.wallHp = 10000
         self.gold = 100
         self.stage = 1
+        self.totalDeadCount = 0
         self.enemySpawnRange = 0,2
         self.font = load_font('resource\HMKMMAG.ttf', 20)
         self.deadCount = 0
@@ -31,19 +32,21 @@ class ObjectManager:
     def handle_events(self,event):
         if (event.type) == (SDL_MOUSEBUTTONDOWN):
             mouseInput = [event.x, 600 - event.y]
-            if (mouseInput < [320, 550] and mouseInput[0] > 280 and mouseInput[1] > 520)and self.gold>20:
-                self.Recruit(mouseInput)
-            else:
+            if not(mouseInput < [310, 550] and mouseInput[0] > 280 and mouseInput[1] > 520):
                 for unit in self.alliesList:
                     unitPosition = unit.x,unit.y
-                    if (unitPosition[0] > mouseInput[0] - 10 and unitPosition[1] > mouseInput[1] - 15 and unitPosition[
-                        0] < mouseInput[0] + 10 and unitPosition[1] < mouseInput[1] + 15):
+                    if (unitPosition[0] > mouseInput[0] - 20 and unitPosition[1] > mouseInput[1] - 25 and unitPosition[0] < mouseInput[0] + 20
+                        and unitPosition[1] < mouseInput[1] + 25):
                         self.activeUnit = unit
                         break
                 if (self.activeUnit != None):
                     self.activeUnit.SetMoveDirection(mouseInput)
+            else:
+                if self.gold>20:
+                    self.Recruit(mouseInput)
 
-
+    def Combination(self):
+        
 
     def SpawnEnemy(self):
         choose = random.randint(self.enemySpawnRange[0],self.enemySpawnRange[1])
@@ -75,10 +78,12 @@ class ObjectManager:
                 if(enemy.hp<=0):
                     self.enemyList.remove(enemy)
                     self.deadCount += 1
+                    self.totalDeadCount += 1
                     self.gold += enemy.gold
         self.font.draw(550, 580, '스테이지: %d' % self.stage, (1, 1, 1))
         self.font.draw(700, 580, '골드: %d G' % self.gold, (255, 255, 0))
-        self.font.draw(300, 580, '성 체력: %d ' % self.wallHp, (255, 255, 0))
+        self.font.draw(300, 580, '성 체력: %d ' % self.wallHp, (1, 0, 0))
+        self.font.draw(100, 580, '물리친 적: %d ' % self.totalDeadCount, (1, 1, 1))
 
     def Update(self, frameTime):
         self.timePass = self.timePass +frameTime
@@ -91,6 +96,7 @@ class ObjectManager:
                 self.WallDamage(enemy.attackPoint*frameTime)
         for ally in self.alliesList:
             ally.Update(frameTime)
+
         self.effectManager.Update(frameTime)
         if self.deadCount>100:
             self.stage+=1

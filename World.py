@@ -20,6 +20,7 @@ class World:
 
     def Draw(self):
         self.buildingImage[1].draw(300, 550)
+        self.buildingImage[0].draw(100, 550)
         for i in range(0, 10):
             self.wallImage[1].draw(134 * i, 400)
 
