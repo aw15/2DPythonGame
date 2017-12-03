@@ -32,11 +32,11 @@ class ObjectManager:
     def handle_events(self,event):
         if (event.type) == (SDL_MOUSEBUTTONDOWN):
             mouseInput = [event.x, 600 - event.y]
-            if not(mouseInput < [310, 550] and mouseInput[0] > 280 and mouseInput[1] > 520):
+            if not(mouseInput[0] < 330and mouseInput[1]< 600 and mouseInput[0] > 270 and mouseInput[1] > 500):
                 for unit in self.alliesList:
                     unitPosition = unit.x,unit.y
-                    if (unitPosition[0] > mouseInput[0] - 20 and unitPosition[1] > mouseInput[1] - 25 and unitPosition[0] < mouseInput[0] + 20
-                        and unitPosition[1] < mouseInput[1] + 25):
+                    if (unitPosition[0] > mouseInput[0] - 15 and unitPosition[1] > mouseInput[1] - 20 and unitPosition[0] < mouseInput[0] + 15
+                        and unitPosition[1] < mouseInput[1] + 20):
                         self.activeUnit = unit
                         break
                 if (self.activeUnit != None):
@@ -46,7 +46,25 @@ class ObjectManager:
                     self.Recruit(mouseInput)
 
     def Combination(self):
-        
+        combinationList =[]
+        for allies in self.alliesList:
+            pos = allies.x, allies.y
+            if (pos[0] < 174 and pos[1] < 650 and pos[0] > 30 and pos[1] > 450):
+                combinationList.append(allies)
+            if len(combinationList) == 2:
+                break
+        if len(combinationList) == 2:
+            select = []
+            if combinationList[0].tag > combinationList[1].tag:
+                select.append( combinationList[0].tag)
+            else:
+                select.append(combinationList[1].tag)
+            select.append(combinationList[0].tag + combinationList[1].tag + 3)
+            newObject = Ally(min(24,random.randint(select[0],select[1])))
+            newObject.SetPosition((110 , 450))
+            self.alliesList.append(newObject)
+            self.alliesList.remove(combinationList[0])
+            self.alliesList.remove(combinationList[1])
 
     def SpawnEnemy(self):
         choose = random.randint(self.enemySpawnRange[0],self.enemySpawnRange[1])
@@ -60,7 +78,7 @@ class ObjectManager:
     def Recruit(self,mouseInput):
         choose = random.randint(0,2)
         newObject = Ally(choose)
-        newObject.SetPosition((mouseInput[0],mouseInput[1]-50))
+        newObject.SetPosition((mouseInput[0]-100,mouseInput[1]-50))
         self.alliesList.append(newObject)
         self.gold -=20
 
@@ -87,6 +105,7 @@ class ObjectManager:
 
     def Update(self, frameTime):
         self.timePass = self.timePass +frameTime
+        self.Combination()
         if(self.timePass>1):
             self.SpawnEnemy()
             self.timePass = 0

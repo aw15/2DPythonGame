@@ -6,12 +6,12 @@
   {"hp":150,"attack":50,"gold":10} ,
   {"hp":260,"attack":60,"gold":10} ,
   {"hp":370,"attack":70,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10} ,
-  {"hp":80,"attack":80,"gold":10}
+  {"hp":580,"attack":80,"gold":10} ,
+  {"hp":580,"attack":80,"gold":10} ,
+  {"hp":580,"attack":80,"gold":10} ,
+  {"hp":880,"attack":80,"gold":10} ,
+  {"hp":880,"attack":80,"gold":10} ,
+  {"hp":880,"attack":80,"gold":10} ,
+  {"hp":880,"attack":80,"gold":10} ,
+  {"hp":880,"attack":80,"gold":10}
 ]

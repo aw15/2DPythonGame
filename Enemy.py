@@ -33,7 +33,6 @@ class Enemy:
                 Enemy.imageList.append([temp1, temp2, temp3, temp4])
             enemyStatText = open('Enemy.json','r')
             Enemy.statList = json.load(enemyStatText)
-            print(Enemy.statList)
             enemyStatText.close()
         self.animationIndex = 0
         self.x = 0
