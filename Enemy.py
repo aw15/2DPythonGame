@@ -74,7 +74,7 @@ class Enemy:
 
     def Update(self, elapsedTime):
         deltaX = 0
-        deltaY = 390 - self.y
+        deltaY = 300 - self.y
         length = math.sqrt(pow(deltaX, 2) + pow(deltaY, 2))
         if length < 10:
             self.moving = [0, 0]
@@ -84,6 +84,6 @@ class Enemy:
             self.state = self.MOVE_UP
         else:
             self.state = self.MOVE_DOWN
-        self.y = self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime
+        self.y = min(300 , self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime)
         self.x = self.x + self.moving[0] * self.RUN_SPEED_PPS * elapsedTime
 

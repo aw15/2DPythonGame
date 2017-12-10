@@ -16,6 +16,7 @@ def create_world():
     global world, objectManager
     world = World()
     objectManager = ObjectManager()
+
     pass
 
 
@@ -28,7 +29,7 @@ def destroy_world():
 
 
 def enter():
-    open_canvas()
+    open_canvas(800,600)
     game_framework.reset_time()
     create_world()
 

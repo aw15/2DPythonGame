@@ -20,11 +20,13 @@ class Ally:
     STOP = 2
 
     imageList = None
+    soundList = None
     statList = None
 
     def __init__(self,tag=0):
         if Ally.imageList == None:
             Ally.imageList = []
+            Ally.soundList = []
             for i in range(1, 26):
                 filename = '\c' + str(i) + '-'
                 temp1 = load_image(r'resource\character\allies' + filename + '1.png')
@@ -32,6 +34,10 @@ class Ally:
                 temp3 = load_image(r'resource\character\allies' + filename + '3.png')
                 temp4 = load_image(r'resource\character\allies' + filename + '4.png')
                 Ally.imageList.append([temp1, temp2, temp3, temp4])
+            for i in range(1,2):
+                temp = load_wav("resource/music/laser1.wav")
+                temp.set_volume(32)
+                Ally.soundList.append(temp)
             allyStatFile = open('Ally.json','r')
             Ally.statList= json.load(allyStatFile)
             allyStatFile.close()
@@ -46,6 +52,7 @@ class Ally:
         self.image = Ally.imageList[tag]
         self.effectType = Ally.statList[tag]["effectType"]
         self.attackPoint = Ally.statList[tag]["attackPoint"]
+        self.attackSound = Ally.soundList[Ally.statList[tag]["attackSound"]]
 
     def SetPosition(self,pos):
         self.x = pos[0]
@@ -60,7 +67,7 @@ class Ally:
         if self.animationIndex > 1:
             self.animationIndex = 0
         self.Move()
-        self.y = max(430, self.y + self.moving[1] * self.RUN_SPEED_PPS * frameTime)
+        self.y = max(380, self.y + self.moving[1] * self.RUN_SPEED_PPS * frameTime)
         self.x =self.x+ self.moving[0]*self.RUN_SPEED_PPS*frameTime
     def Draw(self,frameTime):
         if (self.state == self.MOVE_UP):

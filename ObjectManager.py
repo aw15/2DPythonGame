@@ -28,11 +28,14 @@ class ObjectManager:
         self.font = load_font('resource\HMKMMAG.ttf', 20)
         self.deadCount = 0
         self.win = False
+        self.bgm = load_music('resource/music/background.mp3')
+        self.bgm.set_volume(74)
+        self.bgm.repeat_play()
 
     def handle_events(self,event):
         if (event.type) == (SDL_MOUSEBUTTONDOWN):
             mouseInput = [event.x, 600 - event.y]
-            if not(mouseInput[0] < 330and mouseInput[1]< 600 and mouseInput[0] > 270 and mouseInput[1] > 500):
+            if not(mouseInput[0] < 670and mouseInput[1]< 600 and mouseInput[0] > 570 and mouseInput[1] > 480):
                 for unit in self.alliesList:
                     unitPosition = unit.x,unit.y
                     if (unitPosition[0] > mouseInput[0] - 15 and unitPosition[1] > mouseInput[1] - 20 and unitPosition[0] < mouseInput[0] + 15
@@ -49,7 +52,8 @@ class ObjectManager:
         combinationList =[]
         for allies in self.alliesList:
             pos = allies.x, allies.y
-            if (pos[0] < 174 and pos[1] < 650 and pos[0] > 30 and pos[1] > 450):
+            if (pos[0] < 160 and pos[1] < 600 and pos[0] > 60 and pos[1] > 480):
+
                 combinationList.append(allies)
             if len(combinationList) == 2:
                 break
@@ -78,11 +82,12 @@ class ObjectManager:
     def Recruit(self,mouseInput):
         choose = random.randint(0,2)
         newObject = Ally(choose)
-        newObject.SetPosition((mouseInput[0]-100,mouseInput[1]-50))
+        newObject.SetPosition((400+random.randint(0,100)-100,500+random.randint(0,100)-50))
         self.alliesList.append(newObject)
         self.gold -=20
 
     def Draw(self,frameTime):
+        self.timePass2 = self.timePass + frameTime
         for enemy in self.enemyList:
             enemy.Draw(frameTime)
         for ally in self.alliesList:
@@ -90,8 +95,11 @@ class ObjectManager:
 
             for enemy in self.enemyList:
                 distance = pow(ally.x - enemy.x, 2) + pow(ally.y - enemy.y, 2)
-                if distance < 10000:
+                if distance < 15000:
                     self.effectManager.Draw(enemy.x, enemy.y, ally.effectType)
+                    if(self.timePass2>1):
+                        ally.attackSound.play()
+                        self.timePass2=0
                     enemy.hp = enemy.hp - (ally.attackPoint*frameTime)
                 if(enemy.hp<=0):
                     self.enemyList.remove(enemy)
@@ -111,7 +119,7 @@ class ObjectManager:
             self.timePass = 0
         for enemy in self.enemyList:
             enemy.Update(frameTime)
-            if(enemy.y>380):#벽에 가까이 오면 성벽 체력 달기
+            if(enemy.y>290):#벽에 가까이 오면 성벽 체력 달기
                 self.WallDamage(enemy.attackPoint*frameTime)
         for ally in self.alliesList:
             ally.Update(frameTime)
