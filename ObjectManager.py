@@ -29,21 +29,36 @@ class ObjectManager:
         self.deadCount = 0
         self.win = False
         self.bgm = load_music('resource/music/background.mp3')
-        self.bgm.set_volume(74)
+        self.bgm.set_volume(100)
         self.bgm.repeat_play()
-
+        self.mousePos = [0,0]
+        self.allSelect = False
+        self.activeUnitList = []
     def handle_events(self,event):
+        print(self.allSelect)
+        if(event.key, event.type) == (SDLK_a,SDL_KEYDOWN):
+            self.allSelect = True
+        elif(event.key, event.type) == (SDLK_a,SDL_KEYUP):
+            self.allSelect = False
+            self.activeUnitList.clear()
         if (event.type) == (SDL_MOUSEBUTTONDOWN):
             mouseInput = [event.x, 600 - event.y]
+            self.mousePos = mouseInput
             if not(mouseInput[0] < 670and mouseInput[1]< 600 and mouseInput[0] > 570 and mouseInput[1] > 480):
                 for unit in self.alliesList:
                     unitPosition = unit.x,unit.y
                     if (unitPosition[0] > mouseInput[0] - 15 and unitPosition[1] > mouseInput[1] - 20 and unitPosition[0] < mouseInput[0] + 15
-                        and unitPosition[1] < mouseInput[1] + 20):
+                        and unitPosition[1] < mouseInput[1] + 20 and not self.allSelect):
                         self.activeUnit = unit
                         break
-                if (self.activeUnit != None):
+                    elif (unitPosition[0] > mouseInput[0] - 40 and unitPosition[1] > mouseInput[1] - 40 and unitPosition[0] < mouseInput[0] + 40
+                        and unitPosition[1] < mouseInput[1] + 40 and self.allSelect):
+                        self.activeUnitList.append(unit)
+                if (self.activeUnit != None and not self.allSelect):
                     self.activeUnit.SetMoveDirection(mouseInput)
+                elif len(self.activeUnitList) != 0:
+                    for unit in self.activeUnitList:
+                        unit.SetMoveDirection(mouseInput)
             else:
                 if self.gold>20:
                     self.Recruit(mouseInput)
@@ -88,6 +103,11 @@ class ObjectManager:
 
     def Draw(self,frameTime):
         self.timePass2 = self.timePass + frameTime
+        if(self.allSelect):
+            draw_rectangle(self.mousePos[0]-50,self.mousePos[1]-50,self.mousePos[0]+50,self.mousePos[1]+50)
+        else:
+            draw_rectangle(self.mousePos[0]-15,self.mousePos[1]-20,self.mousePos[0]+15,self.mousePos[1]+15)
+
         for enemy in self.enemyList:
             enemy.Draw(frameTime)
         for ally in self.alliesList:
