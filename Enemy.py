@@ -31,7 +31,7 @@ class Enemy:
                 temp3 = load_image(r'resource\character\enemy' + filename + '3.png')
                 temp4 = load_image(r'resource\character\enemy' + filename + '4.png')
                 Enemy.imageList.append([temp1, temp2, temp3, temp4])
-            enemyStatText = open('Enemy.json','r')
+            enemyStatText = open('json/Enemy.json','r')
             Enemy.statList = json.load(enemyStatText)
             enemyStatText.close()
         self.animationIndex = 0

@@ -35,7 +35,6 @@ class ObjectManager:
         self.allSelect = False
         self.activeUnitList = []
     def handle_events(self,event):
-        print(self.allSelect)
         if(event.key, event.type) == (SDLK_a,SDL_KEYDOWN):
             self.allSelect = True
         elif(event.key, event.type) == (SDLK_a,SDL_KEYUP):

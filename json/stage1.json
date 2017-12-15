@@ -19,7 +19,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"desert_tiles.json"
+         "source":"./json/desert_tiles.json"
         }],
  "tilewidth":32,
  "type":"map",

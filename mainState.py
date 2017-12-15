@@ -72,7 +72,7 @@ def update(frame_time):
 def draw(frame_time):
     global world, objectManager
     clear_canvas()
-    world.Draw()
+    world.Draw(objectManager.stage)
     objectManager.Draw(frame_time)
 
 

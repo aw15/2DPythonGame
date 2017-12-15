@@ -37,7 +37,7 @@ class Ally:
                 temp = load_wav("resource/music/laser1.wav")
                 temp.set_volume(32)
                 Ally.soundList.append(temp)
-            allyStatFile = open('Ally.json','r')
+            allyStatFile = open('json/Ally.json','r')
             Ally.statList= json.load(allyStatFile)
             allyStatFile.close()
         self.animationIndex = 0
