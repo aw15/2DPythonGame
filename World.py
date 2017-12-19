@@ -8,7 +8,7 @@ class World:
     def __init__(self):
         self.buildingImage = None
         self.wallImage = None
-        self.stage1 = load_tile_map("json/stage1.json")
+        self.stage1 = load_tile_map("json/stage2.json")
         self.canvas_width = get_canvas_width()
         self.canvas_height = get_canvas_height()
 

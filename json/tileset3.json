@@ -1,0 +1,12 @@
+{ "columns":30,
+ "image":"resource\/map\/adobe-2.png",
+ "imageheight":960,
+ "imagewidth":960,
+ "margin":0,
+ "name":"tileset3",
+ "spacing":0,
+ "tilecount":900,
+ "tileheight":32,
+ "tilewidth":32,
+ "type":"tileset"
+}
