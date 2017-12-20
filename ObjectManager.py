@@ -101,6 +101,9 @@ class ObjectManager:
         self.gold -=20
 
     def Draw(self,frameTime):
+        draw_rectangle(570, 480, 670, 600)
+        draw_rectangle(60, 480, 160, 600)
+
         self.timePass2 = self.timePass + frameTime
         if(self.allSelect):
             draw_rectangle(self.mousePos[0]-50,self.mousePos[1]-50,self.mousePos[0]+50,self.mousePos[1]+50)
@@ -109,6 +112,8 @@ class ObjectManager:
 
         for enemy in self.enemyList:
             enemy.Draw(frameTime)
+            if (enemy.y > 290):  # 벽에 가까이 오면 성벽 체력 달기
+                self.effectManager.Draw(enemy.x, enemy.y + random.randint(45,50), 5)
         for ally in self.alliesList:
             ally.Draw(frameTime)
 
@@ -144,22 +149,20 @@ class ObjectManager:
             ally.Update(frameTime)
 
         self.effectManager.Update(frameTime)
-        if self.deadCount>100:
+        if self.deadCount>200:
             self.stage+=1
             self.deadCount = 0
 
         if self.stage == 1:
-            self.enemySpawnRange = 0,4
+            self.enemySpawnRange = 0,5
         elif self.stage == 2:
-            self.enemySpawnRange = 2,6
+            self.enemySpawnRange = 5,9
         elif self.stage == 3:
-            self.enemySpawnRange = 4,8
+            self.enemySpawnRange = 7,12
         elif self.stage == 4:
-            self.enemySpawnRange = 6,10
-        elif self.stage == 5:
-            self.enemySpawnRange = 8, 12
-        elif self.stage == 6:
-            self.enemySpawnRange = 10, 15
+            self.enemySpawnRange = 10,15
+        elif self.stage ==5:
+            self.win = True
 
     def WallDamage(self,damage):
         self.wallHp -= damage

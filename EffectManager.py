@@ -27,6 +27,8 @@ class Effect:
             self.DrawBeamHit(x, y, choose)
         elif choose<5:
             self.DrawExplosion(x,y,choose-3)
+        elif(choose == 5):
+            self.DrawProjectile(x,y,choose-4)
 
 
     def DrawExplosion(self,x,y,choose):
