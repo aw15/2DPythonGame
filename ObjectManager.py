@@ -129,7 +129,7 @@ class ObjectManager:
                     self.enemyList.remove(enemy)
                     self.deadCount += 1
                     self.totalDeadCount += 1
-                    self.gold += enemy.gold
+                    self.gold += 10 # 돈벌기
         self.font.draw(550, 580, '스테이지: %d' % self.stage, (1, 1, 1))
         self.font.draw(700, 580, '골드: %d G' % self.gold, (255, 255, 0))
         self.font.draw(300, 580, '성 체력: %d ' % self.wallHp, (1, 0, 0))

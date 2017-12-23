@@ -42,7 +42,7 @@ class Enemy:
         self.state = self.MOVE_DOWN
         self.image = Enemy.imageList[tag]
 
-        self.gold = Enemy.statList[tag]["gold"]
+        self.speed = Enemy.statList[tag]["speed"]
         self.hp = Enemy.statList[tag]["hp"]
         self.attackPoint = Enemy.statList[tag]["attack"]
 
@@ -84,6 +84,6 @@ class Enemy:
             self.state = self.MOVE_UP
         else:
             self.state = self.MOVE_DOWN
-        self.y = min(300 , self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime)
-        self.x = self.x + self.moving[0] * self.RUN_SPEED_PPS * elapsedTime
+        self.y = min(300 , self.y + self.moving[1] * self.RUN_SPEED_PPS * elapsedTime*self.speed)
+        self.x = self.x + self.moving[0] * self.RUN_SPEED_PPS * elapsedTime*self.speed
 
