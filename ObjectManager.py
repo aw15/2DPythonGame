@@ -22,7 +22,7 @@ class ObjectManager:
         self.effectManager = Effect()
         self.wallHp = 10000
         self.gold = 100
-        self.stage = 1
+        self.stage = 2
         self.totalDeadCount = 0
         self.enemySpawnRange = 0,2
         self.font = load_font('resource\HMKMMAG.ttf', 20)

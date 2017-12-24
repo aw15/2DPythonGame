@@ -73,7 +73,6 @@ def draw(frame_time):
     global world, objectManager
     clear_canvas()
     world.Draw(objectManager.stage)
-    world.activeStage = objectManager.stage
     objectManager.Draw(frame_time)
 
 
