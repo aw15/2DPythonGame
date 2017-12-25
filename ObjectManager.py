@@ -22,10 +22,10 @@ class ObjectManager:
         self.effectManager = Effect()
         self.wallHp = 10000
         self.gold = 100
-        self.stage = 2
+        self.stage = 3
         self.totalDeadCount = 0
         self.enemySpawnRange = 0,2
-        self.font = load_font('resource\HMKMMAG.ttf', 20)
+        self.font = load_font('resource\HMKMMAG.ttf', 15)
         self.deadCount = 0
         self.win = False
         self.bgm = load_music('resource/music/background.mp3')
@@ -101,8 +101,8 @@ class ObjectManager:
         self.gold -=20
 
     def Draw(self,frameTime):
-        draw_rectangle(570, 480, 670, 600)
-        draw_rectangle(60, 480, 160, 600)
+        #draw_rectangle(570, 480, 670, 600)
+        #draw_rectangle(60, 480, 160, 600)
 
         self.timePass2 = self.timePass + frameTime
         if(self.allSelect):
@@ -130,10 +130,10 @@ class ObjectManager:
                     self.deadCount += 1
                     self.totalDeadCount += 1
                     self.gold += 10 # 돈벌기
-        self.font.draw(550, 580, '스테이지: %d' % self.stage, (1, 1, 1))
-        self.font.draw(700, 580, '골드: %d G' % self.gold, (255, 255, 0))
-        self.font.draw(300, 580, '성 체력: %d ' % self.wallHp, (1, 0, 0))
-        self.font.draw(100, 580, '물리친 적: %d ' % self.totalDeadCount, (1, 1, 1))
+        self.font.draw(600, 30, '스테이지: %d' % self.stage, (1, 1, 1))
+        self.font.draw(700, 30, '골드: %d G' % self.gold, (1, 1, 1))
+        self.font.draw(600, 60, '성 체력: %d ' % self.wallHp, (1, 0, 0))
+        self.font.draw(700, 60, '물리친 적: %d ' % self.totalDeadCount, (1, 1, 1))
 
     def Update(self, frameTime):
         self.timePass = self.timePass +frameTime
@@ -152,17 +152,19 @@ class ObjectManager:
         if self.deadCount>200:
             self.stage+=1
             self.deadCount = 0
+            if self.stage == 1:
+                self.enemySpawnRange = 0, 3
+            elif self.stage == 2:
+                self.enemySpawnRange = 4,7
+            elif self.stage == 3:
+                self.enemySpawnRange = 7, 10
+            elif self.stage == 4:
+                self.enemySpawnRange = 9, 13
+            elif self.stage == 5:
+                self.enemySpawnRange = 12, 15
+            elif self.stage == 6:
+                self.win = True
 
-        if self.stage == 1:
-            self.enemySpawnRange = 0,5
-        elif self.stage == 2:
-            self.enemySpawnRange = 5,9
-        elif self.stage == 3:
-            self.enemySpawnRange = 7,12
-        elif self.stage == 4:
-            self.enemySpawnRange = 10,15
-        elif self.stage ==5:
-            self.win = True
 
     def WallDamage(self,damage):
         self.wallHp -= damage
