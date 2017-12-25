@@ -18,12 +18,8 @@
  "tileheight":32,
  "tilesets":[
         {
-         "firstgid":1,
-         "source":"desert_tiles.json"
-        }, 
-        {
          "firstgid":257,
-         "source":"tileset2.json"
+         "source":"desert_tiles.json"
         }],
  "tilewidth":32,
  "type":"map",

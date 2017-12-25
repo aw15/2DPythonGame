@@ -22,12 +22,13 @@ class ObjectManager:
         self.effectManager = Effect()
         self.wallHp = 10000
         self.gold = 100
-        self.stage = 3
+        self.stage = 1
         self.totalDeadCount = 0
         self.enemySpawnRange = 0,2
         self.font = load_font('resource\HMKMMAG.ttf', 15)
         self.deadCount = 0
         self.win = False
+        self.lose = False
         self.bgm = load_music('resource/music/background.mp3')
         self.bgm.set_volume(100)
         self.bgm.repeat_play()
@@ -138,6 +139,8 @@ class ObjectManager:
     def Update(self, frameTime):
         self.timePass = self.timePass +frameTime
         self.Combination()
+        if(self.wallHp<0):
+            self.lose = True
         if(self.timePass>1):
             self.SpawnEnemy()
             self.timePass = 0
@@ -149,7 +152,7 @@ class ObjectManager:
             ally.Update(frameTime)
 
         self.effectManager.Update(frameTime)
-        if self.deadCount>200:
+        if self.deadCount>50:
             self.stage+=1
             self.deadCount = 0
             if self.stage == 1:
