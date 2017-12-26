@@ -10,9 +10,9 @@ class World:
         self.wallImage = None
         self.stage1 = load_tile_map("stage1.json")
         self.stage2 = load_tile_map("stage2.json")
-        self.stage3 = load_tile_map("stage3.json")
-        self.stage4 = load_tile_map("stage4.json")
-        self.stage5 = load_tile_map("stage5.json")
+        self.stage3 = load_tile_map("stage4.json")
+        self.stage4 = load_tile_map("stage5.json")
+        self.stage5 = load_tile_map("stage3.json")
         self.canvas_width = get_canvas_width()
         self.canvas_height = get_canvas_height()
     def Draw(self,stage):

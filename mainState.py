@@ -4,56 +4,56 @@ import game_framework
 from ObjectManager import *
 from World import *
 from EffectManager import *
-
+import start_state
+import winState
 
 name = "mainState"
 
 objectManager = None
 effectManager = None
 world = None
-effectPosition=[]
-loseImage = None
-winImage = None
 
-winMusic = None
+loseImage = None
 loseMusic = None
+index =0
+totalTime =0
+effectPosition=[]
 
 def create_world():
-    global world, objectManager,effectManager,winImage,loseImage, winMusic, loseMusic
+    global world, objectManager,effectManager,winImage,loseImage, loseMusic
     world = World()
     objectManager = ObjectManager()
     effectManager = Effect()
-    winImage = load_image('resource/titleImage/trophy.png')
-    loseImage = load_image('resource/titleImage/trophy.png')
-    winMusic = load_wav('resource/music/win.wav')
-    winMusic.set_volume(100)
+    loseImage = load_image('resource/titleImage/lose.png')
     loseMusic = load_wav('resource/music/lose.wav')
     loseMusic.set_volume(100)
+
     for i in range(0,20):
         effectPosition.append((random.randint(100,700),random.randint(100,500)))
     pass
 
 
 def destroy_world():
-    global world ,objectManager,effectManager, winMusic, loseMusic
+    global world ,objectManager,effectManager,loseMusic,totalTime,index
     del(objectManager)
     del(world)
     del(effectManager)
-    del(winMusic)
     del(loseMusic)
+    totalTime =0
+    index=0
+    effectPosition.clear()
     pass
 
 
 
 def enter():
-    open_canvas(800,600)
     game_framework.reset_time()
     create_world()
 
 
 def exit():
     destroy_world()
-    close_canvas()
+
 
 
 def pause():
@@ -83,14 +83,14 @@ def handle_events(frame_time):
 def update(frame_time):
     global world,objectManager
     objectManager.Update(frame_time)
-
+    if(objectManager.win):
+        game_framework.change_state(winState)
     pass
 
-index =0
-totalTime =0
+
 
 def draw(frame_time):
-    global world, objectManager, totalTime, effectManager, effectPosition
+    global world, objectManager, totalTime, effectManager, effectPosition,loseMusic,loseImage
     clear_canvas()
     world.Draw(objectManager.stage)
     objectManager.Draw(frame_time)
@@ -100,8 +100,11 @@ def draw(frame_time):
             effectManager.Draw(pos[0], pos[1], 3)
             effectManager.Update(frame_time * 0.05)
         totalTime+=frame_time
-        if(totalTime>3):
-            game_framework.pop_state()
+        loseMusic.repeat_play()
+        loseImage.draw(400, 300)
+        if(totalTime>5):
+            game_framework.change_state(start_state)
+
 
     update_canvas()
 

@@ -29,7 +29,7 @@ class ObjectManager:
         self.deadCount = 0
         self.win = False
         self.lose = False
-        self.bgm = load_music('resource/music/background.mp3')
+        self.bgm = load_wav('resource/music/background.wav')
         self.bgm.set_volume(100)
         self.bgm.repeat_play()
         self.mousePos = [0,0]
@@ -164,7 +164,7 @@ class ObjectManager:
             elif self.stage == 4:
                 self.enemySpawnRange = 9, 13
             elif self.stage == 5:
-                self.enemySpawnRange = 12, 15
+                self.enemySpawnRange = 11, 14
             elif self.stage == 6:
                 self.win = True
 

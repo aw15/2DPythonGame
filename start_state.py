@@ -9,14 +9,12 @@ logo_time = 0.0
 
 def enter():
     global image
-    open_canvas()
     image = load_image('resource/titleImage/kpu_credit.png')
 
 
 def exit():
     global image
     del(image)
-    close_canvas()
 
 
 
@@ -25,7 +23,7 @@ def update(frame_time):
 
     if(logo_time>1.0):
         logo_time = 0
-        game_framework.push_state(title_state)
+        game_framework.change_state(title_state)
     delay(0.01)
     logo_time+=0.01
 
