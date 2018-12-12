@@ -1,0 +1,12 @@
+{ "columns":16,
+ "image":"resource\/map\/tileset3.png",
+ "imageheight":512,
+ "imagewidth":512,
+ "margin":0,
+ "name":"tileset3",
+ "spacing":0,
+ "tilecount":900,
+ "tileheight":32,
+ "tilewidth":32,
+ "type":"tileset"
+}
